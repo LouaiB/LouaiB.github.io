@@ -22,6 +22,14 @@
 		});
 		</script>
 		
+		<script>
+			function PlaySound() {
+				var path = "audio/nyanpassu.mp3";
+				var snd = new Audio(path);
+				snd.play();
+			}
+		</script>
+		
 		
 		<style>
 			#title{
@@ -262,7 +270,7 @@
 			
 			#perk_body{
 				border: solid 2px #00ace6;
-				height: 50vh;
+				height: 50vh;
 			
 			}
 			
@@ -425,7 +433,7 @@
 		<!-- Renge: Left-aligned -->
 		<div id="first_capture">
 		  <div class="media-left" style="padding-left: 50px; padding-top: 35px;">
-			<img src="img/renge.jpg" class="img-circle">
+			<img src="img/renge.jpg" class="img-circle" onclick="PlaySound()">
 		  </div>
 		  <div class="media-body" id="center-content">
 			<h1 class="media-heading">Renge Miyauchi</h1>
