@@ -1,0 +1,271 @@
+#title{
+	text-align: center;
+}
+
+#center-content{
+	text-align: center;
+	padding: 50px;
+	
+}
+
+#traits{
+	text-align: center;
+	padding: 50px;
+	background-color: #f5f5f5;
+	height: 75vh;
+
+}
+
+#carousel_image{
+	height: 100vh;
+	width: 100%;
+	align: center;
+	object-fit: cover;
+}
+
+#first_capture{
+	text-align: center;
+	background-color: #f5f7f9;
+	color: #555555;
+	border-bottom: solid 2px #ddd;
+	height: 50vh;
+	width: 100%;
+}
+
+#second_capture{
+	text-align: center;
+	background-color: #eaecee;
+	color: #555555;
+	border-bottom: solid 2px #ddd;
+	height: 50vh;
+	width: 100%;
+}
+
+
+th {
+	text-align: center;
+}
+
+#comparison{
+	text-align: center;
+	padding: 50px;
+	background-color: #eaecee;
+
+}
+
+#highlight_head{
+	background: #00ace6;
+	font-weight: 700;
+	color: #fff;
+	border-left: 4px solid #00ace6!important;
+	border-right: 4px solid #00ace6!important;
+	text-align: center;
+}
+
+#highlight_td{
+	font-weight: 700;
+	border-left: 4px solid #00ace6!important;
+	border-right: 4px solid #00ace6!important;
+	color: #00ace6;
+}
+
+#highlight_td_last{
+	font-weight: 700;
+	border-left: 4px solid #00ace6!important;
+	border-right: 4px solid #00ace6!important;
+	border-bottom: 4px solid #00ace6!important;
+	color: #00ace6;
+}
+	
+	#highlight_hotaru_hd{
+		background: #ff9966;
+		font-weight: 700;
+		color: #fff;
+		border-left: 4px solid #ff9966!important;
+		
+		text-align: center;
+	}
+	
+	#highlight_komari_hd{
+		background: #802b00;
+		font-weight: 700;
+		color: #fff;
+		border-left: 4px solid #802b00!important;
+		
+		text-align: center;
+	}
+	
+	#highlight_natsumi_hd{
+		background: #ff531a;
+		font-weight: 700;
+		color: #fff;
+		border-left: 4px solid #ff531a!important;
+		
+		text-align: center;
+	}
+	
+	#highlight_renge_hd{
+		background: #9999ff;
+		font-weight: 700;
+		color: #fff;
+		border-left: 4px solid #9999ff!important;
+		border-right: 4px solid #9999ff!important;
+		text-align: center;
+	}
+	
+	
+	#highlight_hotaru_td{
+		font-weight: 700;
+		border-left: 4px solid #ff9966!important;
+		
+		color: #ff9966;
+	}
+	
+	#highlight_komari_td{
+		font-weight: 700;
+		border-left: 4px solid #802b00!important;
+		
+		color: #802b00;
+	}
+	
+	#highlight_natsumi_td{
+		font-weight: 700;
+		border-left: 4px solid #ff531a!important;
+		
+		color: #ff531a;
+	}
+	
+	#highlight_renge_td{
+		font-weight: 700;
+		border-left: 4px solid #9999ff!important;
+		border-right: 4px solid #9999ff!important;
+		color: #9999ff;
+	}
+		
+	
+	#highlight_hotaru_last{
+		font-weight: 700;
+		border-left: 4px solid #ff9966!important;
+		
+		border-bottom: 4px solid #ff9966!important;
+		color: #ff9966;
+	}
+	
+	#highlight_komari_last{
+		font-weight: 700;
+		border-left: 4px solid #802b00!important;
+		
+		border-bottom: 4px solid #802b00!important;
+		color: #802b00;
+	}
+	
+	#highlight_natsumi_last{
+		font-weight: 700;
+		border-left: 4px solid #ff531a!important;
+		
+		border-bottom: 4px solid #ff531a!important;
+		color: #ff531a;
+	}
+	
+	#highlight_renge_last{
+		font-weight: 700;
+		border-left: 4px solid #9999ff!important;
+		border-right: 4px solid #9999ff!important;
+		border-bottom: 4px solid #9999ff!important;
+		color: #9999ff;
+	}
+	
+
+#comp_table{
+	width: 80%;
+	text-align: center;
+	font-size: 18px;
+	
+}
+
+#comp_table_row{
+	height: 70px;
+}
+
+#rikka_sad{
+	padding-left: 200px;
+	height:500px;
+	width: 700px;
+	object-fit: cover;
+
+}
+
+#end{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('img/Non Non Biyori 26.jpg');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: top right;
+	background-attachment: fixed;
+	flex-direction: column;
+
+}
+
+#end_text_h1{
+	font-size: 128px;
+	line-height: 128px;
+	margin: 0;
+	font-weight: 400;
+	color: #fafafa;
+	font-family: Alex Brush;
+}
+
+#end_text_h2{
+	font-size: 32px;
+	margin: 0;
+	font-weight: 400;
+	color: #fafafa;
+	font-family: Alex Brush;
+}
+
+#perk_body{
+	border: solid 2px #00ace6;
+	height: 50vh;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#perk_title{
+	font-family: Sofia, "Comic Sans MS", cursive, sans-serif;
+
+
+}
+
+#banner{
+	background-image: url('img/Non Non Biyori banner.png');
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 30vh;
+	overflow: hidden;
+}
+
+#intro{
+	text-align: center;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('img/Non Non Biyori 26.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fafafa;
+	border: 0px;
+	margin-bottom: 0px;
+	font-family: Alex Brush;
+}
+
+#characters_section_title{
+	text-align: center;
+	font-family: Sofia;
+	margin-bottom: 0px;
+}
+
+#character_description{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
