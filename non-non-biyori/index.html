@@ -1,0 +1,569 @@
+<html>
+	<head>
+		<title>Non Non Biyori</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		
+		<link href="css/bootstrap3_player.css" rel="stylesheet">
+		
+		<script>
+		$(document).ready(function(){
+		  $('[data-toggle="tooltip"]').tooltip(); 
+		});
+		</script>
+		
+		
+		<style>
+			#title{
+				text-align: center;
+			}
+		
+			#center-content{
+				text-align: center;
+				padding: 50px;
+				
+			}
+			
+			#traits{
+				text-align: center;
+				padding: 50px;
+				background-color: #f5f5f5;
+				height: 75vh;
+			
+			}
+			
+			#carousel_image{
+				height: 100vh;
+				width: 100%;
+				align: center;
+				object-fit: cover;
+			}
+			
+			#first_capture{
+				text-align: center;
+				background-color: #f5f7f9;
+				color: #555555;
+				border-bottom: solid 2px #ddd;
+				height: 50vh;
+				width: 100%;
+			}
+			
+			#second_capture{
+				text-align: center;
+				background-color: #eaecee;
+				color: #555555;
+				border-bottom: solid 2px #ddd;
+				height: 50vh;
+				width: 100%;
+			}
+			
+			#third_capture{
+				text-align: center;
+				background-color: #f5f7f9;
+				color: #555555;
+				border-bottom: solid 2px #ddd;
+			}
+			
+			
+			
+			th {
+				text-align: center;
+			}
+			
+			#comparison{
+				text-align: center;
+				padding: 50px;
+				background-color: #eaecee;
+			
+			}
+			
+			#highlight_head{
+				background: #00ace6;
+				font-weight: 700;
+				color: #fff;
+				border-left: 4px solid #00ace6!important;
+				border-right: 4px solid #00ace6!important;
+				text-align: center;
+			}
+			
+			#highlight_td{
+				font-weight: 700;
+				border-left: 4px solid #00ace6!important;
+				border-right: 4px solid #00ace6!important;
+				color: #00ace6;
+			}
+			
+			#highlight_td_last{
+				font-weight: 700;
+				border-left: 4px solid #00ace6!important;
+				border-right: 4px solid #00ace6!important;
+				border-bottom: 4px solid #00ace6!important;
+				color: #00ace6;
+			}
+				
+				#highlight_hotaru_hd{
+					background: #ff9966;
+					font-weight: 700;
+					color: #fff;
+					border-left: 4px solid #ff9966!important;
+					
+					text-align: center;
+				}
+				
+				#highlight_komari_hd{
+					background: #802b00;
+					font-weight: 700;
+					color: #fff;
+					border-left: 4px solid #802b00!important;
+					
+					text-align: center;
+				}
+				
+				#highlight_natsumi_hd{
+					background: #ff531a;
+					font-weight: 700;
+					color: #fff;
+					border-left: 4px solid #ff531a!important;
+					
+					text-align: center;
+				}
+				
+				#highlight_renge_hd{
+					background: #9999ff;
+					font-weight: 700;
+					color: #fff;
+					border-left: 4px solid #9999ff!important;
+					border-right: 4px solid #9999ff!important;
+					text-align: center;
+				}
+				
+				
+				#highlight_hotaru_td{
+					font-weight: 700;
+					border-left: 4px solid #ff9966!important;
+					
+					color: #ff9966;
+				}
+				
+				#highlight_komari_td{
+					font-weight: 700;
+					border-left: 4px solid #802b00!important;
+					
+					color: #802b00;
+				}
+				
+				#highlight_natsumi_td{
+					font-weight: 700;
+					border-left: 4px solid #ff531a!important;
+					
+					color: #ff531a;
+				}
+				
+				#highlight_renge_td{
+					font-weight: 700;
+					border-left: 4px solid #9999ff!important;
+					border-right: 4px solid #9999ff!important;
+					color: #9999ff;
+				}
+					
+				
+				#highlight_hotaru_last{
+					font-weight: 700;
+					border-left: 4px solid #ff9966!important;
+					
+					border-bottom: 4px solid #ff9966!important;
+					color: #ff9966;
+				}
+				
+				#highlight_komari_last{
+					font-weight: 700;
+					border-left: 4px solid #802b00!important;
+					
+					border-bottom: 4px solid #802b00!important;
+					color: #802b00;
+				}
+				
+				#highlight_natsumi_last{
+					font-weight: 700;
+					border-left: 4px solid #ff531a!important;
+					
+					border-bottom: 4px solid #ff531a!important;
+					color: #ff531a;
+				}
+				
+				#highlight_renge_last{
+					font-weight: 700;
+					border-left: 4px solid #9999ff!important;
+					border-right: 4px solid #9999ff!important;
+					border-bottom: 4px solid #9999ff!important;
+					color: #9999ff;
+				}
+				
+			
+			#comp_table{
+				width: 80%;
+				text-align: center;
+				font-size: 18px;
+				
+			}
+			
+			#comp_table_row{
+				height: 70px;
+			}
+			
+			#rikka_sad{
+				padding-left: 200px;
+				height:500px;
+				width: 700px;
+				object-fit: cover;
+			
+			}
+			
+			#end{
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('img/Non Non Biyori 26.jpg');
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100vh;
+				position: relative;
+				overflow: hidden;
+				background-size: cover;
+				background-position: top right;
+				background-attachment: fixed;
+				flex-direction: column;
+			
+			}
+			
+			#end_text_h1{
+				font-size: 128px;
+				line-height: 128px;
+				margin: 0;
+				font-weight: 400;
+				color: #fafafa;
+			}
+			
+			#end_text_h2{
+				font-size: 32px;
+				margin: 0;
+				font-weight: 400;
+				color: #fafafa;
+			}
+			
+			#perk_body{
+				border: solid 2px #00ace6;
+				height: 50vh;
+			
+			}
+			
+			#perk_title{
+			
+			
+			
+			}
+			
+			#banner{
+				background-image: url('img/Non Non Biyori banner.png');
+				background-position: center;
+				background-size: cover;
+				width: 100%;
+				height: 30vh;
+				overflow: hidden;
+			}
+			
+			#intro{
+				text-align: center;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('img/Non Non Biyori 26.jpg');
+				background-attachment: fixed;
+				background-size: cover;
+				color: #fafafa;
+				border: 0px;
+				margin-bottom: 0px;
+			}
+			
+			#characters_section_title{
+				text-align: center;
+				
+				margin-bottom: 0px;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		
+	
+		<div id="nnbCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#nnbCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#nnbCarousel" data-slide-to="1"></li>
+			<li data-target="#nnbCarousel" data-slide-to="2"></li>
+			<li data-target="#nnbCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+			<div class="item active">
+			  <img src="img/Non Non Biyori 1.jpg" alt="Non Non Biyori" id="carousel_image">
+			  <div class="carousel-caption" style="color: #998877;">
+				<h3></h3>
+				<p></p>
+			  </div>
+			</div>
+			
+			<div class="item">
+			  <img src="img/Non Non Biyori 11.jpg" alt="Non Non Biyori" id="carousel_image">
+			  <div class="carousel-caption" style="color: #77aaee;">
+				<h3></h3>
+				<p></p>
+			  </div>
+			</div>
+
+			<div class="item">
+			  <img src="img/Non Non Biyori 22.jpg" alt="Non Non Biyori" id="carousel_image">
+			  <div class="carousel-caption" style="color: #fafafa;">
+				<h3></h3>
+				<p></p>
+			  </div>
+			</div>
+
+			<div class="item">
+			  <img src="img/gallery_1.jpg" alt="Non Non Biyori" id="carousel_image">
+			  <div class="carousel-caption" style="color: #fafafa;">
+				<h3></h3>
+				<p></p>
+			  </div>
+			</div>
+			
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#nnbCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#nnbCarousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+		
+		<!-- Banner -->
+		<div id="banner"></div>
+		
+		<!-- Title -->
+		<div id="title" class="well" style="margin-bottom: 0px;">
+			<h1>Non Non Biyori</h1>
+			<h3>The most relaxing anime</h3>
+			<a href="" class="btn btn-primary">Join the Discord</a> <br><br>
+			
+			<!-- Music Player -->
+			<span style="font-size: 20px;" class="text text-info">Wanna listen to some non non biyori tunes while you browse this page?</span> <br><br>
+			<audio controls>
+				<source src="audio/okaeri.mp3" type="audio/mpeg" />
+				<a href="">dango</a>
+			</audio>
+		</div>
+		
+		<!-- Introduction -->
+		<div class="well" id="intro">
+			<h1>About the show</h1>
+			<blockquote>
+				<p>Asahigaoka might look like typical, boring countryside to most; however, no day in this village can ever be considered colorless thanks to five students of varying ages occupying the only class in the only school in town. The youngest student is first grader Renge Miyauchi, who brings an unadulterated wit, curiosity, and her characteristic catchphrase, "Nyanpasu!" Then there are the Koshigaya siblings consisting of the quiet ninth grader and elder brother Suguru, diminutive eighth grader Komari, and the mischievous seventh grader Natsumi. The recent arrival of Tokyo-raised fifth grader Hotaru Ichijou, who appears overdeveloped for her age and thus naturally holds an air of maturity, rounds out this lively and vibrant group of five classmates.</p>
+
+				<p>Based on the manga penned and illustrated by Atto, Non Non Biyori chronicles the not-so-normal daily lives of this group of friends as they engage in their own brand of fun and frolic, and playfully struggle with the realities of living in a rural area.
+				</p>
+				<footer>MAL Rewrite</footer>
+			</blockquote>
+		</div>
+		
+		
+		<!-- characters section -->
+		<div id="characters_section_title">
+			<h1><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span> The Characters <span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span></h1>
+		</div>
+
+		<!-- Hotaru: Left-aligned -->
+		<div id="first_capture">
+		  <div class="media-left" style="padding-left: 50px; padding-top: 35px;">
+			<img src="img/hotaru.jpg" class="img-circle">
+		  </div>
+		  <div class="media-body" id="center-content">
+			<h1 class="media-heading">Hotaru Ichijou</h1>
+			<h3>Hotaru is a fifth grade elementary school student who transfers into the Asahigaoka Branch School from Tokyo. Tall and quite developed for her age, she doesn't look like an elementary school student and is thus often treated like an adult. She admits to be not good at exercise but is shown to be stronger than Natsumi. She usually maintains a calm and composed appearance but also has a childish side and freaks out easily.</h3>
+
+			<h3>She admires Komari to the point of harboring a crush on her bordering on obsession. She had crafted mass amounts of Komari-like dolls which she tried to keep secret.</h3>
+		  </div>
+		</div>
+
+		<!-- Komari: Right-aligned -->
+		<div id="second_capture">
+		  <div class="media-body"  id="center-content">
+			<h1 class="media-heading">Komari Koshigaya</h1>
+			<h3>Komari is a second-year middle school student of the Asahigaoka Branch School. She is Yukiko's eldest daughter, Suguru's younger sister, and Natsumi's elder sister. She is quite short, which she has a complex about. Because of her height, she is usually mistaken for a child.</h3>
+
+			<h3>She longs to be a mature adult but is often easily scared, something which Natsumi takes advantage of. Still, she is shown to be responsible and looks out for her friends. She is bad at cooking.</h3>
+		  </div>
+		  <div class="media-right" style="padding-right: 50px; padding-top: 35px;">
+			<img src="img/komari.jpg" class="img-circle">
+		  </div>
+		</div>
+		
+		<!-- Renge: Left-aligned -->
+		<div id="first_capture">
+		  <div class="media-left" style="padding-left: 50px; padding-top: 35px;">
+			<img src="img/renge.jpg" class="img-circle">
+		  </div>
+		  <div class="media-body" id="center-content">
+			<h1 class="media-heading">Renge Miyauchi</h1>
+			<h3>Renge is a first grade elementary school student of the Asahigaoka Branch School. She is Kazuho and Hikage's youngest sister. She generally acts her age, being very precocious and curious, but is usually shown blank and expressionless that makes her look mysterious and incomprehensible. Despite this, she is quite friendly and affectionate. She is always seen with her recorder and likes to assign nicknames to her friends. She is also talented in drawing and performs well in school.</h3>
+
+			<h3>She is quite attached to Kaede, who she likes to call "Candy Store," and is very fond of her since she was a baby. She greets her friends by saying "Nyanpasu."</h3>
+		  </div>
+		</div>
+
+		<!-- Natsumi: Right-aligned -->
+		<div id="second_capture">
+		  <div class="media-body"  id="center-content">
+			<h1 class="media-heading">Natsumi Koshigaya</h1>
+			<h3>Natsumi is a first-year middle school student of the Asahigaoka Branch School. She is Yukiko's youngest daughter, and Suguru and Komari's youngest sister. Fun-loving and carefree, she likes playing pranks on other people, talks back to her mother, and does poorly in school. She usually tries to get out of trouble by pinning the blame on someone, or something, else.</h3>
+
+			<h3>She used to have a brother complex when she was younger, promising to marry her older brother, and is very embarrassed of it.</h3>
+		  </div>
+		  <div class="media-right" style="padding-right: 50px; padding-top: 35px;">
+			<img src="img/natsumi.jpg" class="img-circle">
+		  </div>
+		</div>
+		
+		<!-- traits section -->
+		
+		<div id="traits">
+			<h1>Art Style</h1>
+			<h3>A magnificent array of breathtaking scenery</h3>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="well" id="perk_body">
+						<img src="img/Non Non Biyori 23.jpg" class="img-circle" width="60%"><hr>
+						<h2 id="perk_title">Meadows</h2>
+						<blockquote>Beautiful grassy meadows. Individual shreds of grass matching the lustrous shine and dazzling color of emeralds. Flowers of majestic shades never seen before, adding a rainbow of colors to the field.</blockquote>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="well" id="perk_body">
+						<img src="img/Non Non Biyori 26.jpg" class="img-circle" width="60%"><hr>
+						<h2 id="perk_title">Forests</h2>
+						<blockquote>Glistering fog, chilly breeze, invigorous. Mountains in the distance that feel within reach, as if the heavens sit beyond. Quiet, peaceful, spiritful.</blockquote>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="well" id="perk_body">
+						<img src="img/snow.jpg" class="img-circle" width="60%"><hr>
+						<h2 id="perk_title">Snow</h2>
+						<blockquote>White blankets of angelic beauty. The same deep, dense river following across, now turned into a sparkling crystal like texture in the new light of the overwhelming sun that lit up the snow.</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- comparison table -->
+		<div id="comparison">
+			<h1>Trivia</h1>
+			<h3>Who doesn't like random facts about anime characters?</h3>
+			
+			<table class="table-striped" id="comp_table" align="center">
+				<thead>
+					<tr id="comp_table_row">
+						<th></th> 
+						<th id="highlight_hotaru_hd"><img src="img/hotaru_chibi_render.png" width="50px"></th> 
+						<th id="highlight_komari_hd"><img src="img/komari_chibi_render.png" width="50px"></th> 
+						<th id="highlight_natsumi_hd"><img src="img/natsumi_chibi_render.png" width="50px"></th> 
+						<th id="highlight_renge_hd"><img src="img/renge_chibi.png" width="50px"></th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr id="comp_table_row">
+						<td>Age</td>
+						<td id="highlight_hotaru_td">11</td>
+						<td id="highlight_komari_td">13</td>
+						<td id="highlight_natsumi_td">14</td>
+						<td id="highlight_renge_td">7</td>
+					</tr>
+					
+					<tr id="comp_table_row">
+						<td>Birthday</td>
+						<td id="highlight_hotaru_td">May 28</td>
+						<td id="highlight_komari_td">September 14</td>
+						<td id="highlight_natsumi_td">January 24</td>
+						<td id="highlight_renge_td">December 3</td>
+					</tr>
+					
+					<tr id="comp_table_row">
+						<td>Height</td>
+						<td id="highlight_hotaru_td">161 cm</td>
+						<td id="highlight_komari_td">130~140 cm</td>
+						<td id="highlight_natsumi_td">156 cm</td>
+						<td id="highlight_renge_td">134 cm</td>
+					</tr>
+					
+					<tr id="comp_table_row">
+						<td>Blood type</td>
+						<td id="highlight_hotaru_td">O</td>
+						<td id="highlight_komari_td">AB</td>
+						<td id="highlight_natsumi_td">B</td>
+						<td id="highlight_renge_td">B</td>
+					</tr>
+					
+					<tr id="comp_table_row">
+						<td>Favorite food</td>
+						<td id="highlight_hotaru_last">stew</td>
+						<td id="highlight_komari_last">sweet foods</td>
+						<td id="highlight_natsumi_last">ramen</td>
+						<td id="highlight_renge_last">curry</td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+			<br>
+			<a href="https://nonnontv.fandom.com/wiki/Category:Characters" class="text text-info" data-toggle="tooltip" title="more trivia" data-placement="right" style="font-size: 16px;">
+				Wikia characters page
+			</a>
+		</div>
+		
+		<!-- Left-aligned --> <!--
+		<div width="100%" id="third_capture" style="padding-top: 40px;">
+		  <div class="media-left">
+			<img src="img/rikka_sad.gif" class="media-object" id="rikka_sad">
+		  </div>
+		  <div class="media-body" id="center-content" style="text-align: center; padding-right: 220px; padding-left: 100px;">
+			<h1 class="media-heading">Rikka needs<br>more love</h1>
+			<h3>Why would you deny her that??? How much of a heartless person are you to do that???</h3>
+		  </div>
+		</div> -->
+		
+		<!-- End -->
+		<div id="end">
+			<h1 id="end_text_h1">Biyori</h1>
+			<h2 id="end_text_h2">The calmness ensues</h2>
+		</div>
+		
+		
+	</body>
+</html>
