@@ -233,7 +233,7 @@
 				
 				<div class="col-sm-4">
 					<div class="perk_body" id="perk_3">
-						<img src="img/snow.jpg" class="img-circle" width="60%"><hr>
+						<img src="img/snow.jpg" class="img-circle" width="60%" id="3rd_perk_img"><hr>
 						<h2 id="perk_title">Snow</h2>
 						<blockquote>White blankets of angelic beauty. The same deep, dense river following across, now turned into a sparkling crystal like texture in the new light of the overwhelming sun that lit up the snow.</blockquote>
 					</div>
@@ -325,10 +325,10 @@
 		</div>
 		
 		<script>
-			$(document).load(function(){
+			window.onload = function () {
 			   fixPerkHeights();
 			   alert('high fixed yet? JQuery');
-			});
+			};
 		</script>
 	</body>
 </html>
