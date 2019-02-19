@@ -259,7 +259,13 @@ th {
 	color: #fafafa;
 	border: 0px;
 	margin-bottom: 0px;
-	font-family: Alex Brush;
+	font-family: Allura, Times New Roman, Arial;
+}
+
+#intro_quote{
+	font-size: 24px;
+	font-family: Times New Roman, Arial;
+	
 }
 
 #characters_section_title{
