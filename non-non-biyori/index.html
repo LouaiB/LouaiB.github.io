@@ -241,25 +241,6 @@
 			</div>
 		</div>
 		
-		<script>
-			var max_perk_height = 0;
-			var perk1_height = document.getElementById('perk_1').offsetHeight;
-			var perk2_height = document.getElementById('perk_2').offsetHeight;
-			var perk3_height = document.getElementById('perk_3').offsetHeight;
-			
-			if(perk1_height >= perk2_height && perk1_height >= perk3_height){
-				max_perk_height = perk1_height;
-			} else if(perk2_height >= perk1_height && perk2_height >= perk3_height){
-				max_perk_height = perk2_height;
-			} else {
-				max_perk_height = perk3_height;
-			}
-			
-			document.getElementById('perk_1').setAttribute("style","height:" + max_perk_height + "px");
-			document.getElementById('perk_2').setAttribute("style","height:" + max_perk_height + "px");
-			document.getElementById('perk_3').setAttribute("style","height:" + max_perk_height + "px");
-		</script>
-		
 		<!-- comparison table -->
 		<div id="comparison">
 			<h1 style="font-family: Allan; font-size: 50px;">Trivia</h1>
@@ -346,6 +327,7 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
 			   fixPerkHeights();
+			   alert('high fixed yet?');
 			}, false);
 		</script>
 	</body>
