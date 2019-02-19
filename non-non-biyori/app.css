@@ -26,16 +26,26 @@
 
 #perk_title{
 	font-family: Sofia, "Comic Sans MS", cursive, sans-serif;
-
-
 }
 
-#carousel_image{
-	height: 100vh;
-	width: 100%;
-	align: center;
-	object-fit: cover;
+@media screen and (orientation:portrait) { 
+	#carousel_image{
+		height: 50vh;
+		width: 100%;
+		align: center;
+		object-fit: cover;
+	}
 }
+@media screen and (orientation:landscape) { 
+	#carousel_image{
+		height: 100vh;
+		width: 100%;
+		align: center;
+		object-fit: cover;
+	}
+}
+
+
 
 #first_capture{
 	text-align: center;
