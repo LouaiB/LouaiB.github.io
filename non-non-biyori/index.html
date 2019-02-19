@@ -37,6 +37,28 @@
 			}
 		</script>
 		
+		<script>
+			function fixPerkHeights()
+			{
+				var max_perk_height = 0;
+				var perk1_height = document.getElementById('perk_1').offsetHeight;
+				var perk2_height = document.getElementById('perk_2').offsetHeight;
+				var perk3_height = document.getElementById('perk_3').offsetHeight;
+				
+				if(perk1_height >= perk2_height && perk1_height >= perk3_height){
+					max_perk_height = perk1_height;
+				} else if(perk2_height >= perk1_height && perk2_height >= perk3_height){
+					max_perk_height = perk2_height;
+				} else {
+					max_perk_height = perk3_height;
+				}
+				
+				document.getElementById('perk_1').setAttribute("style","height:" + max_perk_height + "px");
+				document.getElementById('perk_2').setAttribute("style","height:" + max_perk_height + "px");
+				document.getElementById('perk_3').setAttribute("style","height:" + max_perk_height + "px");
+			}
+		</script>
+		
 	</head>
 	
 	<body>
@@ -186,7 +208,7 @@
 		  </div>
 		</div>
 		
-		<!-- traits section -->
+		<!-- art style section -->
 		
 		<div id="traits">
 			<h1 style="font-family: Allura; font-size: 50px;">Art Style</h1>
@@ -194,7 +216,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="well" id="perk_body">
+					<div class="perk_body" id="perk_1">
 						<img src="img/Non Non Biyori 23.jpg" class="img-circle" width="60%"><hr>
 						<h2 id="perk_title">Meadows</h2>
 						<blockquote>Beautiful grassy meadows. Individual shreds of grass matching the lustrous shine and dazzling color of emeralds. Flowers of majestic shades never seen before, adding a rainbow of colors to the field.</blockquote>
@@ -202,7 +224,7 @@
 				</div>
 				
 				<div class="col-sm-4">
-					<div class="well" id="perk_body">
+					<div class="perk_body" id="perk_2">
 						<img src="img/Non Non Biyori 26.jpg" class="img-circle" width="60%"><hr>
 						<h2 id="perk_title">Forests</h2>
 						<blockquote>Glistering fog, chilly breeze, invigorous. Mountains in the distance that feel within reach, as if the heavens sit beyond. Quiet, peaceful, spiritful.</blockquote>
@@ -210,7 +232,7 @@
 				</div>
 				
 				<div class="col-sm-4">
-					<div class="well" id="perk_body">
+					<div class="perk_body" id="perk_3">
 						<img src="img/snow.jpg" class="img-circle" width="60%"><hr>
 						<h2 id="perk_title">Snow</h2>
 						<blockquote>White blankets of angelic beauty. The same deep, dense river following across, now turned into a sparkling crystal like texture in the new light of the overwhelming sun that lit up the snow.</blockquote>
@@ -218,6 +240,27 @@
 				</div>
 			</div>
 		</div>
+		
+		<script>fixPerkHeights()</script>
+		
+		<script>
+			var max_perk_height = 0;
+			var perk1_height = document.getElementById('perk_1').offsetHeight;
+			var perk2_height = document.getElementById('perk_2').offsetHeight;
+			var perk3_height = document.getElementById('perk_3').offsetHeight;
+			
+			if(perk1_height >= perk2_height && perk1_height >= perk3_height){
+				max_perk_height = perk1_height;
+			} else if(perk2_height >= perk1_height && perk2_height >= perk3_height){
+				max_perk_height = perk2_height;
+			} else {
+				max_perk_height = perk3_height;
+			}
+			
+			document.getElementById('perk_1').setAttribute("style","height:" + max_perk_height + "px");
+			document.getElementById('perk_2').setAttribute("style","height:" + max_perk_height + "px");
+			document.getElementById('perk_3').setAttribute("style","height:" + max_perk_height + "px");
+		</script>
 		
 		<!-- comparison table -->
 		<div id="comparison">
