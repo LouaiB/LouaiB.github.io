@@ -102,10 +102,10 @@ th {
 }
 	
 	#highlight_hotaru_hd{
-		background: #ff9966;
+		background: #491b04;
 		font-weight: 700;
-		color: #fff;
-		border-left: 4px solid #ff9966!important;
+		color: #491b04;
+		border-left: 4px solid #491b04!important;
 		
 		text-align: center;
 	}
@@ -120,10 +120,10 @@ th {
 	}
 	
 	#highlight_natsumi_hd{
-		background: #ff531a;
+		background: #c34b22;
 		font-weight: 700;
 		color: #fff;
-		border-left: 4px solid #ff531a!important;
+		border-left: 4px solid #c34b22!important;
 		
 		text-align: center;
 	}
@@ -140,9 +140,9 @@ th {
 	
 	#highlight_hotaru_td{
 		font-weight: 700;
-		border-left: 4px solid #ff9966!important;
+		border-left: 4px solid #491b04!important;
 		
-		color: #ff9966;
+		color: #491b04;
 	}
 	
 	#highlight_komari_td{
@@ -154,9 +154,9 @@ th {
 	
 	#highlight_natsumi_td{
 		font-weight: 700;
-		border-left: 4px solid #ff531a!important;
+		border-left: 4px solid #c34b22!important;
 		
-		color: #ff531a;
+		color: #c34b22;
 	}
 	
 	#highlight_renge_td{
@@ -169,10 +169,10 @@ th {
 	
 	#highlight_hotaru_last{
 		font-weight: 700;
-		border-left: 4px solid #ff9966!important;
+		border-left: 4px solid #491b04!important;
 		
-		border-bottom: 4px solid #ff9966!important;
-		color: #ff9966;
+		border-bottom: 4px solid #491b04!important;
+		color: #491b04;
 	}
 	
 	#highlight_komari_last{
@@ -185,10 +185,10 @@ th {
 	
 	#highlight_natsumi_last{
 		font-weight: 700;
-		border-left: 4px solid #ff531a!important;
+		border-left: 4px solid #c34b22!important;
 		
-		border-bottom: 4px solid #ff531a!important;
-		color: #ff531a;
+		border-bottom: 4px solid #c34b22!important;
+		color: #c34b22;
 	}
 	
 	#highlight_renge_last{
