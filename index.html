@@ -1,1 +1,80 @@
-my root
+<html>
+    <head>
+        <title>Louai Baydoun</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/about.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="header_content">
+                <div id="header_text">
+                    <h1 id="header_title">LOUAI BAYDOUN</h1>
+                    <h3 id="header_subtitle">WEB DEVELOPER</h3>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#about" class="btn btn-primary">ABOUT</a>
+                    <a href="#skills" class="btn btn-primary">SKILLS</a>
+                    <a href="#" class="btn btn-primary">EXPERIENCE</a>
+                    <a href="#" class="btn btn-primary">EDUCATION</a>
+                    <a href="#" class="btn btn-primary">CONTACT</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="row">
+            <div id="about_me" class="col-sm-3">
+                <h2 id="about_me_title">ABOUT ME</h2>
+
+                <table id="about_me_table" class="table">
+                    <tr>
+                        <td><strong>Birth</strong></td>
+                        <td>July 30, 1997</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phone</strong></td>
+                        <td>+961 81 216 307</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mail</strong></td>
+                        <td>baydoun.louai@gmail.com</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="media" id="intro">
+                    <div class="media-left">
+                        <img src="img/me.jpg" class="media-object, img-rounded" style="width:200px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const aboutMeHeight = document.querySelector("#about_me").clientHeight;
+            document.querySelector("#intro").setAttribute("style", "height:" + aboutMeHeight + "px");
+        </script>
+
+        <div id="skills">
+            
+        </div>
+
+    </body>
+</html>
