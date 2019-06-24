@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image-card.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Sample Toggle Image Card</h1>
+
+        <!--
+            image-card {
+                image-card-text{
+                    h1
+                    p
+                }
+                img
+                button
+            }
+
+            Specify card dimensions in the inline style of "image-card" div [Required]
+            Specify color scheme in the inline style background-color of "image-card-text" div [Optional. Default is "tomato"]
+        -->
+        <div class="image-card" style="height:500px; width:400px;">
+            <div class="image-card-text" style="background-color: purple;">
+                <h1>Waifu One</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis dolor aperiam omnis, sit rem asperiores impedit doloremque, non incidunt distinctio saepe atque alias labore necessitatibus voluptate excepturi delectus obcaecati. Natus.
+                </p>
+            </div>
+            <img src="sample.jpg" />
+            <button>+</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="image-card.js"></script>

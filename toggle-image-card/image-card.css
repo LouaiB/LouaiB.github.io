@@ -1,0 +1,45 @@
+.image-card{
+    position: relative;
+}
+
+.image-card > img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    transition: all 1s; 
+}
+
+.image-card .image-card-text{
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: tomato;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image-card .image-card-text > p{
+    font-size: 24px;
+}
+
+.image-card > button{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    height: 35px;
+    width: 35px;
+    background-color: tomato;
+    border: 0;
+    font-size: 30px;
+    border-radius: 50%;
+    color: whitesmoke;
+    transition: all 0.3s;
+}
