@@ -1,80 +1,194 @@
-<html>
-    <head>
-        <title>Louai Baydoun</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel='stylesheet' type='text/css'>
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/about.css">
-    </head>
-
-    <body>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="index-body">
         <div id="header">
-            <div id="header_content">
-                <div id="header_text">
-                    <h1 id="header_title">LOUAI BAYDOUN</h1>
-                    <h3 id="header_subtitle">WEB DEVELOPER</h3>
-                </div>
-
-                <div class="btn-group">
-                    <a href="#about" class="btn btn-primary">ABOUT</a>
-                    <a href="#skills" class="btn btn-primary">SKILLS</a>
-                    <a href="#" class="btn btn-primary">EXPERIENCE</a>
-                    <a href="#" class="btn btn-primary">EDUCATION</a>
-                    <a href="#" class="btn btn-primary">CONTACT</a>
-                </div>
+            <div id="header-logo">
+                <img src="img/logo.png" />
             </div>
         </div>
-
-        <div id="about" class="row">
-            <div id="about_me" class="col-sm-3">
-                <h2 id="about_me_title">ABOUT ME</h2>
-
-                <table id="about_me_table" class="table">
-                    <tr>
-                        <td><strong>Birth</strong></td>
-                        <td>July 30, 1997</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Phone</strong></td>
-                        <td>+961 81 216 307</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mail</strong></td>
-                        <td>baydoun.louai@gmail.com</td>
-                    </tr>
-
-                </table>
+        <div id="header-nav">
+            <div><a href="#" class="active-nav-link">Home</a></div>
+            <div><a href="#">About</a></div>
+            <div><a href="#">Services</a></div>
+            <div><a href="#">Portfolio</a></div>
+            <div><a href="#">Contact</a></div>
+        </div>
+        <div id="action-side">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+        </div>
+        <div id="action">
+            <div id="action-main">
+                <div id="shape"></div>
+                <div id="attraction">
+                    <span>Websites<br>Mobile<br>and more</span><br>
+                    <a class="call-to-action">View Portfolio</a>
+                </div>
             </div>
-
-            <div class="col-sm-9">
-                <div class="media" id="intro">
-                    <div class="media-left">
-                        <img src="img/me.jpg" class="media-object, img-rounded" style="width:200px">
+            <div id="corner">
+                <div id="action-perks">
+                    <div>
+                        <span>Business</span>
+                        <span>Online Platforms</span>
                     </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">John Doe</h4>
-                        <p>Lorem ipsum...</p>
+                    <div>
+                        <span>Interprise</span>
+                        <span>Solutions</span>
+                    </div>
+                    <div>
+                        <span>Quality</span>
+                        <span>Quaranteed</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script>
-            const aboutMeHeight = document.querySelector("#about_me").clientHeight;
-            document.querySelector("#intro").setAttribute("style", "height:" + aboutMeHeight + "px");
-        </script>
-
-        <div id="skills">
-            
+        <!-- About Me -->
+        <div id="about-me">
+            <div class="my-image">
+                <img src="img/avatar.png" >
+            </div>
+            <div class="me-div">
+                <span>ABOUT ME</span>
+                <h1>Software Developer</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam molestias obcaecati aliquam temporibus! Facilis tempora harum, dolore deserunt omnis excepturi, labore, delectus non adipisci consequatur officiis dolorem itaque. Debitis!</p>
+                <a href="#">DOWNLOAD CV</a>
+            </div>
         </div>
 
-    </body>
+        <!-- Services -->
+        <div class="section-heading">
+            <span>Our Services</span>
+            <h1>What Services We<br>Offer For You</h1>
+        </div>
+        <div id="services">
+            <!-- Service One -->
+            <div id="service1" class="service">
+                <img src="img/web.png" >
+                <h2>Web Development</h2>
+                <hr>
+                <p>Using the newest technologies provided by Microsoft. High quality websites that can provide you and your customers with a quality experience you can rely on.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div id="service2" class="service">
+                <img src="img/mobile.png" >
+                <h2>Mobile Development</h2>
+                <hr>
+                <p>Mobile applications for both Android and IOS devices. Expanding your presence into the mobile world increases your customers and allows you to provide more convinience to them.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="service3" class="service">
+                <img src="img/cloud.png" >
+                <h2>Hosting</h2>
+                <hr>
+                <p>Reliable and secure hosting for your websites. Hosting is a crucial and often tedious task to get your websites runing. We take care of that for you.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+
+        <!-- Perks -->
+        <div class="section-heading">
+            <span>Perks</span>
+            <h1>What Makes Us<br>Exceptional</h1>
+        </div>
+        <div id="perks">
+            <!-- Guidance -->
+            <div id="perk1" class="perk">
+                <img src="img/puzzle.png" >
+                <h2>Guidance</h2>
+                <p>Making technical decisions for your various platforms is difficult. We provide a helping hand on these important decisions.</p>
+            </div>
+
+            <!-- Completness -->
+            <div id="perk2" class="perk">
+                <img src="img/check.png" >
+                <h2>Completeness</h2>
+                <p>From UI/UX design, to the platform development, and even hosting. We can handle it all.</p>
+            </div>
+
+            <!-- Security -->
+            <div id="perk3" class="perk">
+                <img src="img/gears.png" >
+                <h2>Security</h2>
+                <p>Protecting your clients and their sensitive data is very important. We provide robust security measures that will protect against malicious attacks.</p>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="section-heading">
+            <span>Testimonial</span>
+            <h1>Honourable Client Says<br>About Me</h1>
+        </div>
+        <div id="testimonial">
+            <div class="client-image">
+                <img src="img/avatar.png" >
+            </div>
+            <div class="testimonial-div">
+                <h1>Hasan Deeb</h1>
+                <span>Founder, Delta Co.</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam molestias obcaecati aliquam temporibus! Facilis tempora harum, dolore deserunt omnis excepturi, labore, delectus non adipisci consequatur officiis dolorem itaque. Debitis!</p>
+            </div>
+        </div>
+
+        <!-- Contact Reminder -->
+        <div id="contact-reminder">
+            <span>Have any <span class="blue-span">questions</span> for me?</span>
+            <a href="">Contact Me</a>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div id="footer-logo">
+                <img src="img/logo.png" />
+            </div>
+            <div id="footer-nav">
+                <div><a href="#" class="active-nav-link">Home</a></div>
+                <div><a href="#">About</a></div>
+                <div><a href="#">Services</a></div>
+                <div><a href="#">Portfolio</a></div>
+                <div><a href="#">Contact</a></div>
+            </div>
+            <div id="footer-links">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+            </div>
+            <div id="copyright">
+                Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserver | This site is made by <span class="red-span">Louai Baydoun</span>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+
+<script>
+    window.addEventListener('scroll', () => {
+        let offset = window.pageYOffset;
+
+        // Navbar BG opacity (Non-mobile)
+        if(window.innerWidth > 761){
+            const navbar = document.querySelector('#header-nav');
+            const threshold = 400;
+            const maxOpacity = 1;
+            navbar.style.backgroundColor = `rgba(11, 24, 33, ${offset > threshold ? maxOpacity : (maxOpacity * (offset / threshold))})`;
+        }
+    });
+
+
+</script>
