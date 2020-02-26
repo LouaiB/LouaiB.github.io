@@ -477,11 +477,13 @@
 @media screen and (max-width: 761px){
     .service{
         height: auto;
+        padding: 20px 10px;
     }
 }
 
 .service > img{
     height: 100px;
+    min-height: 100px;
 }
 .service > hr{
     width: 50%;
@@ -565,11 +567,13 @@
 @media screen and (max-width: 761px){
     .perk{
         height: auto;
+        padding: 20px 10px;
     }
 }
 
 .perk > img{
     height: 100px;
+    min-height: 100px;
 }
 .perk > hr{
     width: 50%;
