@@ -481,7 +481,6 @@
 }
 
 .service > img{
-    flex: 5 5 0;
     height: 100px;
 }
 .service > hr{
@@ -489,11 +488,9 @@
     margin: 5px;
 }
 .service > h2{
-    flex: 3 3 0;
     color: #173a5f;
 }
 .service > p{
-    flex: 10 10 0;
     padding: 0 20px;
     font-size: 12px;
     line-height: 22px;
@@ -572,7 +569,6 @@
 }
 
 .perk > img{
-    flex: 5 5 0;
     height: 100px;
 }
 .perk > hr{
@@ -580,11 +576,9 @@
     margin: 5px;
 }
 .perk > h2{
-    flex: 3 3 0;
     color: #173a5f;
 }
 .perk > p{
-    flex: 10 10 0;
     padding: 0 20px;
     font-size: 14px;
     line-height: 22px;
