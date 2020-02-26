@@ -57,7 +57,7 @@
 
     /* Header Nav */
     #header-nav{
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         z-index: 100;
@@ -177,15 +177,6 @@
         flex-direction: column;
         align-items: center;
     }
-    /* #action > #corner > #upward-text{
-        color: white;
-        font-size: 18px;
-        width: 100%;
-        transform: rotate(-90deg) translateY(60px);
-        transform-origin: left;
-        letter-spacing: 20px;
-        text-align: center;
-    } */
     #action > #corner > #action-perks{
         display: flex;
         flex-direction: row;
@@ -442,15 +433,7 @@
     margin: 10px 0;
     padding: 0;
 }
-@media screen and (max-width: 761px){
-    .section-heading{
-        text-align: center;
-    }
 
-    .service{
-        height: auto;
-    }
-}
 
 #services{
     margin: 0 auto;
@@ -464,7 +447,7 @@
 }
 
 .service{
-    height: 50vh;
+    min-height: 50vh;
     min-width: 200px;
     padding: 7vh 10px;
     margin: 10px 20px;
@@ -479,6 +462,16 @@
     text-align: center;
 
     transition: all .4s;
+}
+
+@media screen and (max-width: 761px){
+    .section-heading{
+        text-align: center;
+    }
+
+    .service{
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 761px){
@@ -529,6 +522,9 @@
 .service:hover > h2, .service:hover > p{
     color: #fafafa;
 }
+.service:hover > hr{
+    border-color: #fafafa;
+}
 .service:hover > a{
     color: #fafafa;
     border: 2px solid transparent;
@@ -552,7 +548,7 @@
 }
 
 .perk{
-    height: 50vh;
+    min-height: 50vh;
     min-width: 200px;
     padding: 7vh 10px;
     margin: 10px 20px;
