@@ -304,6 +304,12 @@
   min-height: 25vh;
 }
 
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-selector .project {
+    min-height: 250px;
+  }
+}
+
 #portfolio-section #project-selector .project .image-frame {
   position: absolute;
   top: 0;
