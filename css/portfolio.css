@@ -285,8 +285,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-selector {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #portfolio-section #project-selector .project {
@@ -294,7 +301,6 @@
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   position: relative;
-  min-width: 300px;
   min-height: 25vh;
 }
 

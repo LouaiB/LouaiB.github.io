@@ -175,12 +175,12 @@
         min-height: 30vh
         display: flex
         flex-direction: row
-        flex-wrap: wrap
+        @media screen and (max-width: 761px)
+            flex-direction: column
 
         .project
             flex: 1 1 0
             position: relative
-            min-width: 300px
             min-height: 25vh
 
             .image-frame
@@ -190,7 +190,7 @@
                 height: 100%
                 width: 100%
                 box-sizing: border-box
-                padding: 10% 10%
+                padding: 20px
                 background: linear-gradient(135deg, #315cac, #2f158f)
                 z-index: 2
 
