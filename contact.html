@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Louai</title>
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <div id="contact-section">
+        <header></header>
+
+        <div id="top">
+            <h2>Contact</h2>
+            <span>Home <i class="fa fa-chevron-right"></i> Contact Me</span>
+        </div>
+
+        <div id="touch-section">
+            <div id="touch-title">
+                <span>Get in Touch</span>
+                <span class="error-msg"></span>
+            </div>
+            <div id="contact">
+                <div id="email">
+                    <textarea id="email-body" rows="9" placeholder="Enter your message"></textarea>
+                    <div class="flex-row">
+                        <input id="email-name" placeholder="Enter your name" />
+                        <div class="gap"></div>
+                        <input id="email-sender-email" placeholder="Enter your email" />
+                    </div>
+                    <input id="email-subject" placeholder="Enter subject">
+                    <button onclick="sendEmail()">Send</button>
+                </div>
+                <div id="info">
+                    <div>
+                        <i class="fa fa-tablet"></i>
+                        <div>
+                            <span>+961 81 216 307</span>
+                            <span>Mon to Fri 9am to 6pm</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope-o"></i>
+                        <div>
+                            <span>baydoun.louai@gmail.com</span>
+                            <span>Send us your query anytime!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
+
+<script>
+    fetch("./header-nav.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("header").innerHTML = data;
+            document.querySelectorAll('[nav-to="contact"]').forEach(link => link.classList.add('active-nav-link'));
+        });
+
+    fetch("./footer.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("footer").innerHTML = data;
+            document.querySelectorAll('[nav-to="contact"]').forEach(link => link.classList.add('active-nav-link'));
+            document.querySelector('#year').innerHTML = new Date().getFullYear();
+        });
+</script>
+
+<script>
+    const emailBodyInput = document.querySelector('#email-body');
+    const emailSubjectInput = document.querySelector('#email-subject');
+    const errorMsg = document.querySelector('.error-msg');
+
+    emailBodyInput.addEventListener('click', () => emailBodyInput.classList.remove('danger-input'));
+    emailSubjectInput.addEventListener('click', () => emailSubjectInput.classList.remove('danger-input'));
+
+    function sendEmail(){
+        let body = emailBodyInput.value;
+        let subject = emailSubjectInput.value;
+        let isValid = true;
+        let errors = [];
+        errorMsg.innerHTML = "";
+
+        // Validation
+        if(body.length < 20){
+            emailBodyInput.classList.add('danger-input');
+            errors.push("message must be 20 characters at least");
+            isValid = false;
+        } else {
+            emailBodyInput.classList.remove('danger-input');
+        }
+
+        if(subject.length == 0){
+            emailSubjectInput.classList.add('danger-input');
+            errors.push("subject is required");
+            isValid = false;
+        } else {
+            emailSubjectInput.classList.remove('danger-input');
+        }
+
+        if(!isValid){
+            errorMsg.innerHTML = `* ${errors.join(', ')}`;
+            return;
+        }
+
+        window.open('mailto:baydoun.louai@gmail.com?subject=subject&body=body');
+    }
+</script>

@@ -1,0 +1,215 @@
+#services-section
+    width: 100%
+    max-width: 100%
+    font-family: roboto, sans-serif
+
+    .section-heading
+        margin-top: 30px
+        @media screen and (max-width: 761px)
+            text-align: center
+
+        span
+            color: #888
+            text-transform: uppercase
+            font-size: 14px
+
+        h1
+            color: #173a5f
+            font-size: 44px
+            margin: 10px 0
+            padding: 0
+            @media screen and (max-width: 761px)
+                font-size: 32px
+
+    #intro
+        width: 100%
+        max-width: 100%
+        padding: 20px 40px
+        box-sizing: border-box
+
+        #services
+            margin: 0 auto
+            margin-top: 40px
+            width: 90%
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: stretch
+            justify-content: space-around
+
+            .service-billboard
+                min-height: 50vh
+                min-width: 200px
+                padding: 7vh 10px
+                margin: 10px 20px
+                box-sizing: border-box
+                /* border: 2px solid #4d89a5 */
+                border-radius: 4px
+                flex: 1 1 0
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-around
+                text-align: center
+                cursor: pointer
+                @media screen and (max-width: 761px)
+                    height: auto
+                    padding: 20px 10px
+
+                transition: all .4s
+
+                img
+                    height: 100px
+                    min-height: 100px
+
+                hr
+                    width: 50%
+                    margin: 5px
+
+                h2
+                    color: #173a5f
+
+                p
+                    padding: 0 20px
+                    font-size: 12px
+                    line-height: 22px
+                    color: #5b5e61
+                    text-align: center
+
+                a
+                    text-decoration: none
+                    outline: none
+                    padding: 7px 20px
+                    color: #0c1a23
+                    border: 1px solid #1b333e
+                    border-radius: 4px
+
+                    transition: all .2s
+
+                    &:hover
+                        color: #f1f1f1
+                        background-color: #173a5f
+                        box-shadow: 0 0 3px #6b88a7
+
+                i
+                    color: #173a5f
+                    font-size: 24px
+                    animation: hover 2s infinite ease-in-out
+
+
+                &:hover
+                    background: #173a5f
+
+                    h2, p, i
+                        color: #fafafa
+                    
+                    hr
+                        border-color: #fafafa
+
+                    a
+                        color: #fafafa
+                        border: 2px solid transparent
+                        padding: 6px 20px
+
+                        &:hover
+                            color: #fafafa
+                            box-shadow: 0 0 0 #000
+                            border-bottom: 2px solid #fafafa
+
+    .section-content
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: stretch
+
+        .explanation
+            min-width: 350px
+            flex: 1 1 0
+            @media screen and (max-width: 700px)
+                order: 2
+
+            p
+                font-size: 16px
+                line-height: 26px
+                @media screen and (max-width: 761px)
+                    font-size: 14px
+                    line-height: 24px
+            
+        .image
+            flex: 1 1 0
+            min-width: 300px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+            @media screen and (max-width: 700px)
+                height: 200px
+                order: 1
+                margin: 20px 0
+
+    .service
+        min-height: 50vh
+        width: 100%
+        max-width: 100%
+        padding: 20px 40px
+        box-sizing: border-box
+        &:nth-child(even)
+            background: #f1f1f1
+
+    #contact-reminder
+        height: 25vh
+        width: 100%
+        max-width: 100%
+        padding: 0 10px
+        box-sizing: border-box
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background-image: url('/img/questions.jpg')
+        background-position: center
+        background-repeat: no-repeat
+        background-attachment: fixed
+        background-size: cover
+        background-blend-mode: darken
+        background-color: rgba(0, 0, 0, 0.6)
+
+        span
+            color: white
+            font-size: 36px
+            text-align: center
+            @media screen and (max-width: 761px)
+                font-size: 24px
+
+
+        a
+            text-decoration: none
+            outline: none
+            padding: 10px 20px
+            border: 1px solid #074e99
+            border-radius: 4px
+            color: white
+            font-weight: bold
+            background-color: #105cad
+            margin-top: 20px
+
+            transition: all .2s
+            @media screen and (max-width: 761px)
+                font-size: 12px
+
+            &:hover
+                background-color: transparent
+                color: #105cad
+    
+
+        
+
+@keyframes hover
+    0%
+        transform: translateY(0px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(0px)
+        

@@ -1,0 +1,276 @@
+#portfolio-section
+    width: 100%
+    max-width: 100%
+    font-family: roboto, sans-serif            
+
+
+    #project-info
+        width: 100%
+        background: linear-gradient(135deg, #fafafa, #f1f1f1)
+        box-sizing: border-box
+
+        .project
+            display: flex
+            flex-direction: column
+            height: 0
+            width: 100%
+            overflow: hidden
+            transition: all .4s
+
+            .gallery
+                width: 100%
+                min-height: 50vh
+                position: relative
+                display: grid
+                padding: 40px 20px
+                box-sizing: border-box
+                
+                
+                
+                >div
+                    padding: 10px
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+
+                    .image
+                        position: relative
+                        height: 100%
+                        width: 100%
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: cover
+                        cursor: pointer
+                        box-shadow: 5px 5px 0px rgba(0, 0, 0, .3)
+                        transition: all .6s
+
+                        .overimage
+                            position: absolute
+                            top: 0
+                            left: 0
+                            height: 100%
+                            width: 100%
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            justify-content: center
+                            color: white
+                            font-size: 32px
+                            opacity: 0
+                            z-index: 20
+                            transition: all .2s
+
+                            &:hover
+                                opacity: .7
+
+            .gallery-renshuu
+                grid-template-rows: 1fr 1fr 1fr
+                grid-template-columns: 3fr 1fr 1fr 1fr
+                grid-template-areas: "renshuu1 renshuu2 renshuu3 renshuu3" "renshuu1 renshuu4 renshuu4 renshuu4" "renshuu5 renshuu4 renshuu4 renshuu4"
+                @media screen and (max-width: 761px)
+                    grid-template-rows: 1fr 1fr 1fr 1fr
+                    grid-template-columns: 1fr 1fr
+                    grid-template-areas: "renshuu1 renshuu1" "renshuu2 renshuu3" "renshuu4 renshuu4" "renshuu5 renshuu5"
+                
+                background: linear-gradient(135deg, #315cac, #2f158f)
+
+                >div
+
+                    &:nth-child(1)
+                        grid-area: renshuu1
+                    &:nth-child(2)
+                        grid-area: renshuu2
+                    &:nth-child(3)
+                        grid-area: renshuu3
+                    &:nth-child(4)
+                        grid-area: renshuu4
+                    &:nth-child(5)
+                        grid-area: renshuu5
+
+                    .overimage
+                        background-color: #0cb2ff
+
+            .gallery-fms
+                grid-template-rows: 1fr 1fr
+                grid-template-columns: 1fr 1fr 1fr
+                grid-template-areas: "fms1 fms5 fms2" "fms3 fms5 fms4"
+                @media screen and (max-width: 761px)
+                    grid-template-rows: 1fr 1fr 1fr
+                    grid-template-columns: 1fr 1fr
+                    grid-template-areas: "fms1 fms2" "fms5 fms5" "fms3 fms4"
+
+                background: linear-gradient(135deg, #1b7d9b, #002b53)
+
+                >div
+
+                    &:nth-child(1)
+                        grid-area: fms1
+                    &:nth-child(2)
+                        grid-area: fms2
+                    &:nth-child(3)
+                        grid-area: fms3
+                    &:nth-child(4)
+                        grid-area: fms4
+                    &:nth-child(5)
+                        grid-area: fms5
+
+                    .overimage
+                        background-color: #0cb2ff
+
+            .info
+                flex: 2 2 0
+                display: flex
+                flex-direction: column
+                padding: 40px
+
+                span
+                    &:first-child
+                        font-size: 12px
+                        color: #888
+                        margin-bottom: 5px
+
+                    
+                    font-size: 16px
+                    color: #003268
+                    
+                        
+                
+                h2
+                    font-size: 36px
+                    margin: 0
+                    color: #173a5f
+
+                p
+                    color: #1a1a1a
+                    font-size: 16px
+                    line-height: 26px
+                    margin: 10px 0
+
+                    @media screen and (max-width: 761px)
+                        font-size: 14px
+                        line-height: 24px
+                
+                a
+                    text-decoration: none
+                    outline: none
+                    cursor: pointer
+                    width: fit-content
+                    padding: 15px 20px
+                    background: #0b4788
+                    color: white
+                    font-size: 15px
+                    border-radius: 4px
+                    transition: all .2s
+
+                    &:hover
+                        background: #173a5f
+
+
+                
+
+
+    #project-selector
+        width: 100%
+        min-height: 30vh
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+
+        .project
+            flex: 1 1 0
+            position: relative
+            min-width: 300px
+            min-height: 25vh
+
+            .image-frame
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                box-sizing: border-box
+                padding: 10% 10%
+                background: linear-gradient(135deg, #315cac, #2f158f)
+                z-index: 2
+
+                .image
+                    height: 100%
+                    width: 100%
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+
+
+            .overpane
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                background: rgb(0, 130, 216)
+                opacity: 0
+                z-index: 4
+                cursor: pointer
+
+                transition: all .2s
+
+                &:hover
+                    opacity: .9
+                    
+                span
+                    text-align: center
+                    color: white
+
+                    &:first-child
+                        font-size: 24px
+                        @media screen and (max-width: 761px)
+                            font-size: 14px
+                        
+                    &:last-child
+                        font-size: 18px
+
+        .project-fms
+            .image-frame
+                background: linear-gradient(135deg, #1b7d9b, #002b53)
+                        
+#lightbox
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 50
+    width: 100vw
+    height: 100vh
+    padding: 10%
+    box-sizing: border-box
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: rgba(0, 0, 0, .8)
+
+    transition: all .2s
+
+
+    #lightbox-image
+        height: 100%
+        width: 100%
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+
+        transition: all .2s
+
+    #lightbox-close
+        position: fixed
+        top: 20px
+        right: 20px
+        color: white
+        font-size: 20px
+        cursor: pointer

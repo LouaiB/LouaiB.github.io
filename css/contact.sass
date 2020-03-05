@@ -1,0 +1,119 @@
+#contact-section
+    width: 100%
+    max-width: 100%
+
+    
+
+    #touch-section
+        width: 100%
+        max-width: 100%
+        padding: 40px 15%
+        box-sizing: border-box
+        @media screen and (max-width: 761px)
+            padding: 10px 5%
+        
+        #touch-title
+            margin-bottom: 30px
+            display: flex
+            flex-direction: row
+            align-items: baseline
+            @media screen and (max-width: 761px)
+                flex-direction: column
+
+            span
+                &:first-child
+                    font-size: 26px
+                    font-weight: bold
+                    color: #333
+                    margin-right: 5px
+
+
+        #contact
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+
+            #email
+                flex: 2 2 0
+                display: flex
+                flex-direction: column
+                align-items: stretch
+                padding-right: 20px
+                box-sizing: border-box    
+
+                input, textarea
+                    margin-bottom: 30px
+                    padding: 10px 20px
+                    box-sizing: border-box
+                    border: 1px solid rgba(0, 0, 0, .2)
+                    border-radius: 4px
+                    font-size: 13px
+                    transition: all .4s
+
+                >div.flex-row
+                    display: none
+                    flex-direction: row
+                    flex-wrap: wrap
+                    justify-content: space-between
+
+                    >input
+                        flex: 1 1 0
+                        min-width: 200px
+
+                    .gap
+                        height: 0px
+                        width: 30px
+                
+                button
+                    padding: 15px 20px
+                    margin-bottom: 30px
+                    border: 2px solid #173a5f
+                    border-radius: 4px
+                    background: #173a5f
+                    font-size: 18px
+                    color: white
+                    cursor: pointer
+                    transition: all .3s
+
+                    &:hover
+                        color: #173a5f
+                        background: transparent
+
+            #info
+                flex: 1 1 0
+                min-width: 200px
+
+                >div
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    margin-bottom: 20px
+
+                    i
+                        width: 30px
+                        font-size: 30px
+                        color: #8a8a8a
+                    
+                    >div
+                        display: flex
+                        flex-direction: column
+                        padding-left: 20px
+                        box-sizing: border-box
+
+                        span
+                            &:first-child
+                                font-size: 16px
+                                color: #333
+                            &:last-child
+                                font-size: 14px
+                                color: #8a8a8a
+
+.error-msg
+    color: #ff5959
+    font-size: 14px
+
+.danger-input
+    border: 1px solid #ff5959 !important
+    box-shadow: 0 0 5px #ff5959
+
+    

@@ -1,0 +1,126 @@
+#about-section
+    width: 100%
+    max-width: 100%
+
+    #about-me
+        width: 100%
+        max-width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: stretch
+        padding: 140px 0
+        box-sizing: border-box
+        @media screen and (max-width: 761px)
+            padding: 20px 10px
+
+        .my-image
+            flex: 1 1 0
+            min-height: 200px
+            min-width: 300px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+        .me-div
+            flex: 1 1 0
+            min-width: 300px
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: flex-start
+            padding-left: 30px
+
+
+            >*
+                margin: 0 !important
+                margin-bottom: 20px !important
+
+            span
+                color: #888
+                text-transform: uppercase
+                font-size: 14px
+                @media screen and (max-width: 761px)
+                    display: none
+
+            h1
+                color: #173a5f
+                font-size: 44px
+                margin: 10px 0
+                padding: 0
+                @media screen and (max-width: 761px)
+                    font-size: 32px
+    
+
+            p
+                width: 70%
+                font-size: 12px
+                line-height: 22px
+                color: #5b5e61
+                @media screen and (max-width: 761px)
+                    width: 100%
+
+            a
+                text-decoration: none
+                outline: none
+                padding: 15px 20px
+                color: white
+                background: linear-gradient(135deg, #19508a, #102e4e)
+                border: 0
+                border-radius: 4px
+
+                transition: all .2s
+                @media screen and (max-width: 761px)
+                    align-self: center
+
+                &:hover
+                    box-shadow: 0 0 7px #105cad
+
+    #testimonial
+        width: 100%
+        max-width: 100%
+        min-height: 70vh
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 0 30%
+        box-sizing: border-box
+        background-image: url('/img/plant.jpg')
+        background-size: cover
+        background-position: bottom
+        background-repeat: no-repeat
+        background-blend-mode: darken
+        background-color: rgba(0, 0, 0, .5)
+        @media screen and (max-width: 761px)
+            padding: 0 10%
+
+        >*
+            margin: 3vh 0
+
+        i
+            color: #105cad
+            font-size: 48px
+        p
+            color: white
+            font-size: 16px
+            line-height: 26px
+            text-align: center
+            @media screen and (max-width: 761px)
+                font-size: 13px
+                line-height: 23px
+        img
+            height: 100px
+            width: 100px
+            border-radius: 50%
+
+        >span
+            color: white
+            font-size: 18px
+            @media screen and (max-width: 761px)
+                font-size: 15px
+
+            span.smaller
+                font-size: 14px
+                @media screen and (max-width: 761px)
+                    font-size: 11px

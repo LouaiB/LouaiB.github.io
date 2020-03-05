@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Louai</title>
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <div id="about-section">
+        <header></header>
+
+        <div id="top">
+            <h2>About</h2>
+            <span>Home <i class="fa fa-chevron-right"></i> About</span>
+        </div>
+
+        <div id="about-me">
+            <div class="my-image" style="background-image: url('img/avatar.png');"></div>
+            <div class="me-div">
+                <span>ABOUT ME</span>
+                <h1>Software Developer</h1>
+                <p>My name is Louai Baydoun and I create quality websites and applications. Primarily focused on websites and mobile applications. My experience is built through developing for various projects such as e-commerce, multi platform solutions for security-oriented bank applications, and much more.</p>
+                <p>Graduated from the Lebanese University with a Bachelor's Degree in Computer Science. Ranked as the top student of my year with an average over 80%. I enjoy coding in my spare time, making music, spending time with family & friends, and helping my fellow coders in need.</p>
+                <a href="/pdf/louai_baydoun_cv.pdf" download="louai_baydoun_cv.pdf">DOWNLOAD CV</a>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div id="testimonial">
+            <i class="fa fa-quote-left"></i>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi laborum modi saepe voluptates veniam ex, enim ullam nemo illo vel qui doloribus fugit aspernatur id ipsa suscipit corporis libero iusto.</p>
+            <img src="img/avatar.png" />
+            <span>Hasan Deep, <span class="smaller">DeltaCo Founder</span></span>
+        </div>
+
+        <!-- Contact Reminder -->
+        <div id="contact-reminder">
+            <span>Get in <span class="blue-span">touch.</span></span>
+            <a href="contact.html">Contact Me</a>
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
+
+<script>
+    fetch("./header-nav.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("header").innerHTML = data;
+            document.querySelectorAll('[nav-to="about"]').forEach(link => link.classList.add('active-nav-link'));
+        });
+
+    fetch("./footer.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("footer").innerHTML = data;
+            document.querySelectorAll('[nav-to="about"]').forEach(link => link.classList.add('active-nav-link'));
+            document.querySelector('#year').innerHTML = new Date().getFullYear();
+        });
+</script>

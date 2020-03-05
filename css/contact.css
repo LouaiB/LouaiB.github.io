@@ -1,0 +1,196 @@
+#contact-section {
+  width: 100%;
+  max-width: 100%;
+}
+
+#contact-section #touch-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 15%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 761px) {
+  #contact-section #touch-section {
+    padding: 10px 5%;
+  }
+}
+
+#contact-section #touch-section #touch-title {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media screen and (max-width: 761px) {
+  #contact-section #touch-section #touch-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contact-section #touch-section #touch-title span:first-child {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+}
+
+#contact-section #touch-section #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact-section #touch-section #contact #email {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 0px;
+          flex: 2 2 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#contact-section #touch-section #contact #email input, #contact-section #touch-section #contact #email textarea {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+#contact-section #touch-section #contact #email > div.flex-row {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact-section #touch-section #contact #email > div.flex-row > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  min-width: 200px;
+}
+
+#contact-section #touch-section #contact #email > div.flex-row .gap {
+  height: 0px;
+  width: 30px;
+}
+
+#contact-section #touch-section #contact #email button {
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  border: 2px solid #173a5f;
+  border-radius: 4px;
+  background: #173a5f;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#contact-section #touch-section #contact #email button:hover {
+  color: #173a5f;
+  background: transparent;
+}
+
+#contact-section #touch-section #contact #info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  min-width: 200px;
+}
+
+#contact-section #touch-section #contact #info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+#contact-section #touch-section #contact #info > div i {
+  width: 30px;
+  font-size: 30px;
+  color: #8a8a8a;
+}
+
+#contact-section #touch-section #contact #info > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#contact-section #touch-section #contact #info > div > div span:first-child {
+  font-size: 16px;
+  color: #333;
+}
+
+#contact-section #touch-section #contact #info > div > div span:last-child {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.error-msg {
+  color: #ff5959;
+  font-size: 14px;
+}
+
+.danger-input {
+  border: 1px solid #ff5959 !important;
+  -webkit-box-shadow: 0 0 5px #ff5959;
+          box-shadow: 0 0 5px #ff5959;
+}
+/*# sourceMappingURL=contact.css.map */

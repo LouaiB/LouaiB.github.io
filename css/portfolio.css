@@ -1,0 +1,422 @@
+#portfolio-section {
+  width: 100%;
+  max-width: 100%;
+  font-family: roboto, sans-serif;
+}
+
+#portfolio-section #project-info {
+  width: 100%;
+  background: linear-gradient(135deg, #fafafa, #f1f1f1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio-section #project-info .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+#portfolio-section #project-info .project .gallery {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  padding: 40px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio-section #project-info .project .gallery > div {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#portfolio-section #project-info .project .gallery > div .image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+#portfolio-section #project-info .project .gallery > div .image .overimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: 32px;
+  opacity: 0;
+  z-index: 20;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#portfolio-section #project-info .project .gallery > div .image .overimage:hover {
+  opacity: .7;
+}
+
+#portfolio-section #project-info .project .gallery-renshuu {
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 3fr 1fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr 1fr;
+      grid-template-areas: "renshuu1 renshuu2 renshuu3 renshuu3" "renshuu1 renshuu4 renshuu4 renshuu4" "renshuu5 renshuu4 renshuu4 renshuu4";
+  background: linear-gradient(135deg, #315cac, #2f158f);
+}
+
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-info .project .gallery-renshuu {
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "renshuu1 renshuu1" "renshuu2 renshuu3" "renshuu4 renshuu4" "renshuu5 renshuu5";
+  }
+}
+
+#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: renshuu1;
+}
+
+#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: renshuu2;
+}
+
+#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: renshuu3;
+}
+
+#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: renshuu4;
+}
+
+#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: renshuu5;
+}
+
+#portfolio-section #project-info .project .gallery-renshuu > div .overimage {
+  background-color: #0cb2ff;
+}
+
+#portfolio-section #project-info .project .gallery-fms {
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "fms1 fms5 fms2" "fms3 fms5 fms4";
+  background: linear-gradient(135deg, #1b7d9b, #002b53);
+}
+
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-info .project .gallery-fms {
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "fms1 fms2" "fms5 fms5" "fms3 fms4";
+  }
+}
+
+#portfolio-section #project-info .project .gallery-fms > div:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fms1;
+}
+
+#portfolio-section #project-info .project .gallery-fms > div:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: fms2;
+}
+
+#portfolio-section #project-info .project .gallery-fms > div:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fms3;
+}
+
+#portfolio-section #project-info .project .gallery-fms > div:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: fms4;
+}
+
+#portfolio-section #project-info .project .gallery-fms > div:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: fms5;
+}
+
+#portfolio-section #project-info .project .gallery-fms > div .overimage {
+  background-color: #0cb2ff;
+}
+
+#portfolio-section #project-info .project .info {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 0px;
+          flex: 2 2 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+}
+
+#portfolio-section #project-info .project .info span {
+  font-size: 16px;
+  color: #003268;
+}
+
+#portfolio-section #project-info .project .info span:first-child {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+#portfolio-section #project-info .project .info h2 {
+  font-size: 36px;
+  margin: 0;
+  color: #173a5f;
+}
+
+#portfolio-section #project-info .project .info p {
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-info .project .info p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+#portfolio-section #project-info .project .info a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 20px;
+  background: #0b4788;
+  color: white;
+  font-size: 15px;
+  border-radius: 4px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#portfolio-section #project-info .project .info a:hover {
+  background: #173a5f;
+}
+
+#portfolio-section #project-selector {
+  width: 100%;
+  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#portfolio-section #project-selector .project {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  position: relative;
+  min-width: 300px;
+  min-height: 25vh;
+}
+
+#portfolio-section #project-selector .project .image-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10% 10%;
+  background: linear-gradient(135deg, #315cac, #2f158f);
+  z-index: 2;
+}
+
+#portfolio-section #project-selector .project .image-frame .image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#portfolio-section #project-selector .project .overpane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #0082d8;
+  opacity: 0;
+  z-index: 4;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#portfolio-section #project-selector .project .overpane:hover {
+  opacity: .9;
+}
+
+#portfolio-section #project-selector .project .overpane span {
+  text-align: center;
+  color: white;
+}
+
+#portfolio-section #project-selector .project .overpane span:first-child {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-selector .project .overpane span:first-child {
+    font-size: 14px;
+  }
+}
+
+#portfolio-section #project-selector .project .overpane span:last-child {
+  font-size: 18px;
+}
+
+#portfolio-section #project-selector .project-fms .image-frame {
+  background: linear-gradient(135deg, #1b7d9b, #002b53);
+}
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  padding: 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#lightbox #lightbox-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#lightbox #lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=portfolio.css.map */

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Louai</title>
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <div id="services-section">
+        <header></header>
+
+        <div id="top">
+            <h2>Services</h2>
+            <span>Home <i class="fa fa-chevron-right"></i> Services</span>
+        </div>
+
+        <div id="intro">
+            <!-- Services -->
+            <div class="section-heading">
+                <span>Our Services</span>
+                <h1>What Services We<br>Offer For You</h1>
+            </div>
+            <div id="services">
+                <!-- Service One -->
+                <div class="service-billboard" jump-to="service1">
+                    <img src="img/web.png" >
+                    <h2>Web Development</h2>
+                    <!-- <hr>
+                    <p>Using the newest technologies provided by Microsoft. High quality websites that can provide you and your customers with a quality experience you can rely on.</p> -->
+                    <i class="fa fa-arrow-down"></i>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-billboard" jump-to="service2">
+                    <img src="img/mobile.png" >
+                    <h2>Mobile Development</h2>
+                    <!-- <hr>
+                    <p>Mobile applications for both Android and IOS devices. Expanding your presence into the mobile world increases your customers and allows you to provide more convinience to them.</p> -->
+                    <i class="fa fa-arrow-down"></i>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="service-billboard" jump-to="service3">
+                    <img src="img/cloud.png" >
+                    <h2>Hosting</h2>
+                    <!-- <hr>
+                    <p>Reliable and secure hosting for your websites. Hosting is a crucial and often tedious task to get your websites runing. We take care of that for you.</p> -->
+                    <i class="fa fa-arrow-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="service1" class="service">
+            <div class="section-heading">
+                <span>Service</span>
+                <h1>Web Development</h1>
+            </div>
+            <div class="section-content">
+                <div class="explanation">
+                    <p>Using the newest technologies provided by Microsoft. High quality websites that can provide you and your customers with a quality experience you can rely on.</p>
+                    <p>User interface design can also be provided in case you don't have one ready. Furthermore, thorough security measures will be implemented into your website to protect your customers and your data from malicious attacks.</p>
+                </div>
+                <div class="image" style="background-image: url('img/websites.png');"></div>
+            </div>
+        </div>
+        <div id="service2" class="service">
+            <div class="section-heading">
+                <span>Service</span>
+                <h1>Mobile Development</h1>
+            </div>
+            <div class="section-content">
+                <div class="explanation">
+                    <p>Mobile applications for both Android and IOS devices. Expanding your presence into the mobile world grows your customer base and allows you to provide them with more convinience.</p>
+                    <p>The mobile application can also be requested alongside a website. Modern applications employ both websites and mobile apps together that serve the customers regardless of the device they are using.</p>
+                </div>
+                <div class="image" style="background-image: url('img/mobiles.png');"></div>
+            </div>
+        </div>
+        <div id="service3" class="service">
+            <div class="section-heading">
+                <span>Service</span>
+                <h1>Hosting</h1>
+            </div>
+            <div class="section-content">
+                <div class="explanation">
+                    <p>Reliable and secure hosting for your websites. Hosting is a crucial and often tedious task to get your websites runing. We take care of that for you.</p>
+                    <p>High traffic and scalable hosting is also provided, utilizing Microsoft's very own cloud hosting technologies.</p>
+                </div>
+                <div class="image" style="background-image: url('img/cloud-shaded.png');"></div>
+            </div>
+        </div>
+
+        <!-- Contact Reminder -->
+        <div id="contact-reminder">
+            <span>Do you have any <span class="blue-span">projects?</span></span>
+            <a href="contact.html">Contact Me</a>
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
+
+<script>
+    fetch("./header-nav.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("header").innerHTML = data;
+            document.querySelectorAll('[nav-to="services"]').forEach(link => link.classList.add('active-nav-link'));
+        });
+
+    fetch("./footer.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("footer").innerHTML = data;
+            document.querySelectorAll('[nav-to="services"]').forEach(link => link.classList.add('active-nav-link'));
+            document.querySelector('#year').innerHTML = new Date().getFullYear();
+        });
+</script>
+
+<script>
+    const serviceBillboards = document.querySelectorAll('[jump-to]');
+
+    serviceBillboards.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            window.location.href = `#${trigger.getAttribute('jump-to')}`;
+        })
+    })
+</script>
+

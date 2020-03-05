@@ -3,38 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Louai</title>
+    <link rel="icon" href="favicon.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
     <div id="index-body">
-        <div id="header">
-            <div id="header-logo">
-                <img src="img/logo.png" />
-            </div>
-        </div>
-        <div id="header-nav">
-            <div><a href="#" class="active-nav-link">Home</a></div>
-            <div><a href="#">About</a></div>
-            <div><a href="#">Services</a></div>
-            <div><a href="#">Portfolio</a></div>
-            <div><a href="#">Contact</a></div>
-        </div>
+        <header></header>
         <div id="action-side">
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="https://www.linkedin.com/in/louaib" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.github.com/louaib" target="_blank"><i class="fa fa-github"></i></a>
         </div>
         <div id="action">
             <div id="action-main">
                 <div id="shape"></div>
                 <div id="attraction">
                     <span>Websites<br>Mobile<br>and more</span><br>
-                    <a class="call-to-action">View Portfolio</a>
+                    <a class="call-to-action" href="portfolio.html">View Portfolio</a>
                 </div>
             </div>
             <div id="corner">
@@ -63,42 +53,44 @@
             <div class="me-div">
                 <span>ABOUT ME</span>
                 <h1>Software Developer</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam molestias obcaecati aliquam temporibus! Facilis tempora harum, dolore deserunt omnis excepturi, labore, delectus non adipisci consequatur officiis dolorem itaque. Debitis!</p>
-                <a href="#">DOWNLOAD CV</a>
+                <p>My name is Louai Baydoun and I create quality websites and applications. Primarily focused on websites and mobile applications. My experience is built through developing for various projects such as e-commerce, multi platform solutions for security-oriented bank applications, and much more.</p>
+                <a href="/pdf/louai_baydoun_cv.pdf" download="louai_baydoun_cv.pdf">DOWNLOAD CV</a>
             </div>
         </div>
 
         <!-- Services -->
-        <div class="section-heading">
-            <span>Our Services</span>
-            <h1>What Services We<br>Offer For You</h1>
-        </div>
-        <div id="services">
-            <!-- Service One -->
-            <div id="service1" class="service">
-                <img src="img/web.png" >
-                <h2>Web Development</h2>
-                <hr>
-                <p>Using the newest technologies provided by Microsoft. High quality websites that can provide you and your customers with a quality experience you can rely on.</p>
-                <a href="#">LEARN MORE</a>
+        <div id="services-bg">
+            <div class="section-heading">
+                <span>Our Services</span>
+                <h1>What Services We<br>Offer For You</h1>
             </div>
-
-            <!-- Service 2 -->
-            <div id="service2" class="service">
-                <img src="img/mobile.png" >
-                <h2>Mobile Development</h2>
-                <hr>
-                <p>Mobile applications for both Android and IOS devices. Expanding your presence into the mobile world increases your customers and allows you to provide more convinience to them.</p>
-                <a href="#">LEARN MORE</a>
-            </div>
-
-            <!-- Section 3 -->
-            <div id="service3" class="service">
-                <img src="img/cloud.png" >
-                <h2>Hosting</h2>
-                <hr>
-                <p>Reliable and secure hosting for your websites. Hosting is a crucial and often tedious task to get your websites runing. We take care of that for you.</p>
-                <a href="#">LEARN MORE</a>
+            <div id="services">
+                <!-- Service One -->
+                <div id="service1" class="service">
+                    <img src="img/web.png" >
+                    <h2>Web Development</h2>
+                    <hr>
+                    <p>Using the newest technologies provided by Microsoft. High quality websites that can provide you and your customers with a quality experience you can rely on.</p>
+                    <a href="services.html#service1">LEARN MORE</a>
+                </div>
+    
+                <!-- Service 2 -->
+                <div id="service2" class="service">
+                    <img src="img/mobile.png" >
+                    <h2>Mobile Development</h2>
+                    <hr>
+                    <p>Mobile applications for both Android and IOS devices. Expanding your presence into the mobile world increases your customers and allows you to provide more convinience to them.</p>
+                    <a href="services.html#service2">LEARN MORE</a>
+                </div>
+    
+                <!-- Section 3 -->
+                <div id="service3" class="service">
+                    <img src="img/cloud.png" >
+                    <h2>Hosting</h2>
+                    <hr>
+                    <p>Reliable and secure hosting for your websites. Hosting is a crucial and often tedious task to get your websites runing. We take care of that for you.</p>
+                    <a href="services.html#service3">LEARN MORE</a>
+                </div>
             </div>
         </div>
 
@@ -131,64 +123,52 @@
         </div>
 
         <!-- Testimonial -->
-        <div class="section-heading">
-            <span>Testimonial</span>
-            <h1>Honourable Client Says<br>About Me</h1>
-        </div>
-        <div id="testimonial">
-            <div class="client-image">
-                <img src="img/avatar.png" >
+        <div id="testimonial-bg">
+            <div class="section-heading">
+                <span>Testimonial</span>
+                <h1>Honourable Client Says<br>About Me</h1>
             </div>
-            <div class="testimonial-div">
-                <h1>Hasan Deeb</h1>
-                <span>Founder, Delta Co.</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam molestias obcaecati aliquam temporibus! Facilis tempora harum, dolore deserunt omnis excepturi, labore, delectus non adipisci consequatur officiis dolorem itaque. Debitis!</p>
+            <div id="testimonial">
+                <div class="client-image">
+                    <img src="img/avatar.png" >
+                </div>
+                <div class="testimonial-div">
+                    <h1>Hasan Deeb</h1>
+                    <span>Founder, Delta Co.</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam molestias obcaecati aliquam temporibus! Facilis tempora harum, dolore deserunt omnis excepturi, labore, delectus non adipisci consequatur officiis dolorem itaque. Debitis!</p>
+                </div>
             </div>
         </div>
 
         <!-- Contact Reminder -->
         <div id="contact-reminder">
             <span>Have any <span class="blue-span">questions</span> for me?</span>
-            <a href="">Contact Me</a>
+            <a href="contact.html">Contact Me</a>
         </div>
 
         <!-- Footer -->
-        <div id="footer">
-            <div id="footer-logo">
-                <img src="img/logo.png" />
-            </div>
-            <div id="footer-nav">
-                <div><a href="#" class="active-nav-link">Home</a></div>
-                <div><a href="#">About</a></div>
-                <div><a href="#">Services</a></div>
-                <div><a href="#">Portfolio</a></div>
-                <div><a href="#">Contact</a></div>
-            </div>
-            <div id="footer-links">
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
-                <a href="#"><i class="fa fa-google"></i></a>
-            </div>
-            <div id="copyright">
-                Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserver | This site is made by <span class="red-span">Louai Baydoun</span>
-            </div>
-        </div>
+        <footer></footer>
     </div>
 </body>
 </html>
 
 <script>
-    window.addEventListener('scroll', () => {
-        let offset = window.pageYOffset;
+    fetch("./header-nav.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("header").innerHTML = data;
+            document.querySelectorAll('[nav-to="home"]').forEach(link => link.classList.add('active-nav-link'));
+        });
 
-        // Navbar BG opacity (Non-mobile)
-        if(window.innerWidth > 761){
-            const navbar = document.querySelector('#header-nav');
-            const threshold = 400;
-            const maxOpacity = 1;
-            navbar.style.backgroundColor = `rgba(11, 24, 33, ${offset > threshold ? maxOpacity : (maxOpacity * (offset / threshold))})`;
-        }
-    });
-
-
+    fetch("./footer.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector("footer").innerHTML = data;
+            document.querySelectorAll('[nav-to="home"]').forEach(link => link.classList.add('active-nav-link'));
+            document.querySelector('#year').innerHTML = new Date().getFullYear();
+        });
 </script>
