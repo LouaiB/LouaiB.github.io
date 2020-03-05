@@ -306,7 +306,7 @@
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10% 10%;
+  padding: 20px;
   background: linear-gradient(135deg, #315cac, #2f158f);
   z-index: 2;
 }
