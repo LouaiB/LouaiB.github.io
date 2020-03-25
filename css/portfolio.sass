@@ -3,6 +3,48 @@
     max-width: 100%
     font-family: roboto, sans-serif            
 
+    #intro
+        width: 100%
+        max-width: 100%
+        padding: 10px 5%
+        box-sizing: border-box
+        background: linear-gradient(135deg, #fafafa, #eaeaea)
+
+        .section-heading
+            margin-top: 30px
+
+            span
+                color: #888
+                text-transform: uppercase
+                font-size: 14px
+
+            h1
+                color: #173a5f
+                font-size: 44px
+                margin: 10px 0
+                padding: 0
+                @media screen and (max-width: 761px)
+                    font-size: 32px
+
+        p
+            color: #888
+        
+        .down-ind
+            width: 100%
+            padding: 20px 0
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+
+            i
+                color: #173a5f
+                font-size: 26px
+                padding: 5px
+                border: 2px solid #173a5f
+                border-radius: 50%
+                animation: hover infinite 3s
+           
 
     #project-info
         width: 100%
@@ -19,104 +61,83 @@
 
             .gallery
                 width: 100%
-                min-height: 50vh
                 position: relative
-                display: grid
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                align-items: center
+                justify-content: space-between
                 padding: 40px 20px
                 box-sizing: border-box
-                
-                
+                background: linear-gradient(135deg, #eaeaea, #bcbcbc)
+                @media screen and (max-width: 761px)
+                    padding: 10px
+
+                // &:before
+                //     content: ""
+                //     position: absolute
+                //     left: 50%
+                //     top: 0
+                //     margin-left: -25%
+                //     height: 0px
+                //     width: 50%
+                //     border-bottom: 2px solid white
                 
                 >div
+                    min-height: 150px
+                    min-width: 150px
                     padding: 10px
-                    display: flex
-                    flex-direction: column
-                    align-items: center
-                    justify-content: center
+                    flex: 1 1 0
+                    margin: 10px 10px
+                    position: relative
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    cursor: pointer
+                    box-shadow: 5px 5px 0px rgba(0, 0, 0, .3)
+                    transition: all .6s
+                    @media screen and (max-width: 761px)
+                        min-height: 80px
+                        min-width: 80px
 
-                    .image
-                        position: relative
+                    .overimage
+                        position: absolute
+                        top: 0
+                        left: 0
                         height: 100%
                         width: 100%
-                        background-position: center
-                        background-repeat: no-repeat
-                        background-size: cover
-                        cursor: pointer
-                        box-shadow: 5px 5px 0px rgba(0, 0, 0, .3)
-                        transition: all .6s
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: center
+                        color: white
+                        font-size: 32px
+                        opacity: 0
+                        z-index: 20
+                        transition: all .2s
 
-                        .overimage
-                            position: absolute
-                            top: 0
-                            left: 0
-                            height: 100%
-                            width: 100%
-                            display: flex
-                            flex-direction: column
-                            align-items: center
-                            justify-content: center
-                            color: white
-                            font-size: 32px
-                            opacity: 0
-                            z-index: 20
-                            transition: all .2s
-
-                            &:hover
-                                opacity: .7
+                        &:hover
+                            opacity: .7
 
             .gallery-renshuu
-                grid-template-rows: 1fr 1fr 1fr
-                grid-template-columns: 3fr 1fr 1fr 1fr
-                grid-template-areas: "renshuu1 renshuu2 renshuu3 renshuu3" "renshuu1 renshuu4 renshuu4 renshuu4" "renshuu5 renshuu4 renshuu4 renshuu4"
-                @media screen and (max-width: 761px)
-                    grid-template-rows: 1fr 1fr 1fr 1fr
-                    grid-template-columns: 1fr 1fr
-                    grid-template-areas: "renshuu1 renshuu1" "renshuu2 renshuu3" "renshuu4 renshuu4" "renshuu5 renshuu5"
                 
-                background: linear-gradient(135deg, #315cac, #2f158f)
+                // background: linear-gradient(135deg, #5631ac, #21158f)
 
                 >div
-
-                    &:nth-child(1)
-                        grid-area: renshuu1
-                    &:nth-child(2)
-                        grid-area: renshuu2
-                    &:nth-child(3)
-                        grid-area: renshuu3
-                    &:nth-child(4)
-                        grid-area: renshuu4
-                    &:nth-child(5)
-                        grid-area: renshuu5
-
                     .overimage
                         background-color: #0cb2ff
 
             .gallery-fms
-                grid-template-rows: 1fr 1fr
-                grid-template-columns: 1fr 1fr 1fr
-                grid-template-areas: "fms1 fms5 fms2" "fms3 fms5 fms4"
-                @media screen and (max-width: 761px)
-                    grid-template-rows: 1fr 1fr 1fr
-                    grid-template-columns: 1fr 1fr
-                    grid-template-areas: "fms1 fms2" "fms5 fms5" "fms3 fms4"
+                // background: linear-gradient(135deg, #1b579b, #001353)
 
-                background: linear-gradient(135deg, #1b7d9b, #002b53)
+                .overimage
+                    background-color: #0cb2ff
 
-                >div
+            .gallery-deltaco
+                // background: linear-gradient(135deg, #521b9b, #160053)
 
-                    &:nth-child(1)
-                        grid-area: fms1
-                    &:nth-child(2)
-                        grid-area: fms2
-                    &:nth-child(3)
-                        grid-area: fms3
-                    &:nth-child(4)
-                        grid-area: fms4
-                    &:nth-child(5)
-                        grid-area: fms5
-
-                    .overimage
-                        background-color: #0cb2ff
+                .overimage
+                    background-color: #0cb2ff
 
             .info
                 flex: 2 2 0
@@ -152,6 +173,7 @@
                         line-height: 24px
                 
                 a
+                    display: none
                     text-decoration: none
                     outline: none
                     cursor: pointer
@@ -183,7 +205,7 @@
             position: relative
             min-height: 25vh
             @media screen and (max-width: 761px)
-                min-height: 250px
+                min-height: 200px
 
             .image-frame
                 position: absolute
@@ -229,7 +251,7 @@
                     color: white
 
                     &:first-child
-                        font-size: 24px
+                        font-size: 18px
                         @media screen and (max-width: 761px)
                             font-size: 14px
                         
@@ -276,3 +298,12 @@
         color: white
         font-size: 20px
         cursor: pointer
+
+
+@keyframes hover
+    0%
+        transform: translateY(0px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(0px)

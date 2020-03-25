@@ -4,6 +4,70 @@
   font-family: roboto, sans-serif;
 }
 
+#portfolio-section #intro {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: linear-gradient(135deg, #fafafa, #eaeaea);
+}
+
+#portfolio-section #intro .section-heading {
+  margin-top: 30px;
+}
+
+#portfolio-section #intro .section-heading span {
+  color: #888;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#portfolio-section #intro .section-heading h1 {
+  color: #173a5f;
+  font-size: 44px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 761px) {
+  #portfolio-section #intro .section-heading h1 {
+    font-size: 32px;
+  }
+}
+
+#portfolio-section #intro p {
+  color: #888;
+}
+
+#portfolio-section #intro .down-ind {
+  width: 100%;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#portfolio-section #intro .down-ind i {
+  color: #173a5f;
+  font-size: 26px;
+  padding: 5px;
+  border: 2px solid #173a5f;
+  border-radius: 50%;
+  -webkit-animation: hover infinite 3s;
+          animation: hover infinite 3s;
+}
+
 #portfolio-section #project-info {
   width: 100%;
   background: linear-gradient(135deg, #fafafa, #f1f1f1);
@@ -28,36 +92,43 @@
 
 #portfolio-section #project-info .project .gallery {
   width: 100%;
-  min-height: 50vh;
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  padding: 40px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#portfolio-section #project-info .project .gallery > div {
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: linear-gradient(135deg, #eaeaea, #bcbcbc);
 }
 
-#portfolio-section #project-info .project .gallery > div .image {
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-info .project .gallery {
+    padding: 10px;
+  }
+}
+
+#portfolio-section #project-info .project .gallery > div {
+  min-height: 150px;
+  min-width: 150px;
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  margin: 10px 10px;
   position: relative;
-  height: 100%;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,7 +139,14 @@
   transition: all .6s;
 }
 
-#portfolio-section #project-info .project .gallery > div .image .overimage {
+@media screen and (max-width: 761px) {
+  #portfolio-section #project-info .project .gallery > div {
+    min-height: 80px;
+    min-width: 80px;
+  }
+}
+
+#portfolio-section #project-info .project .gallery > div .overimage {
   position: absolute;
   top: 0;
   left: 0;
@@ -95,118 +173,19 @@
   transition: all .2s;
 }
 
-#portfolio-section #project-info .project .gallery > div .image .overimage:hover {
+#portfolio-section #project-info .project .gallery > div .overimage:hover {
   opacity: .7;
-}
-
-#portfolio-section #project-info .project .gallery-renshuu {
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  -ms-grid-columns: 3fr 1fr 1fr 1fr;
-      grid-template-columns: 3fr 1fr 1fr 1fr;
-      grid-template-areas: "renshuu1 renshuu2 renshuu3 renshuu3" "renshuu1 renshuu4 renshuu4 renshuu4" "renshuu5 renshuu4 renshuu4 renshuu4";
-  background: linear-gradient(135deg, #315cac, #2f158f);
-}
-
-@media screen and (max-width: 761px) {
-  #portfolio-section #project-info .project .gallery-renshuu {
-    -ms-grid-rows: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "renshuu1 renshuu1" "renshuu2 renshuu3" "renshuu4 renshuu4" "renshuu5 renshuu5";
-  }
-}
-
-#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: renshuu1;
-}
-
-#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: renshuu2;
-}
-
-#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: renshuu3;
-}
-
-#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-area: renshuu4;
-}
-
-#portfolio-section #project-info .project .gallery-renshuu > div:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: renshuu5;
 }
 
 #portfolio-section #project-info .project .gallery-renshuu > div .overimage {
   background-color: #0cb2ff;
 }
 
-#portfolio-section #project-info .project .gallery-fms {
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "fms1 fms5 fms2" "fms3 fms5 fms4";
-  background: linear-gradient(135deg, #1b7d9b, #002b53);
+#portfolio-section #project-info .project .gallery-fms .overimage {
+  background-color: #0cb2ff;
 }
 
-@media screen and (max-width: 761px) {
-  #portfolio-section #project-info .project .gallery-fms {
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "fms1 fms2" "fms5 fms5" "fms3 fms4";
-  }
-}
-
-#portfolio-section #project-info .project .gallery-fms > div:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: fms1;
-}
-
-#portfolio-section #project-info .project .gallery-fms > div:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: fms2;
-}
-
-#portfolio-section #project-info .project .gallery-fms > div:nth-child(3) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: fms3;
-}
-
-#portfolio-section #project-info .project .gallery-fms > div:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: fms4;
-}
-
-#portfolio-section #project-info .project .gallery-fms > div:nth-child(5) {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: fms5;
-}
-
-#portfolio-section #project-info .project .gallery-fms > div .overimage {
+#portfolio-section #project-info .project .gallery-deltaco .overimage {
   background-color: #0cb2ff;
 }
 
@@ -256,6 +235,7 @@
 }
 
 #portfolio-section #project-info .project .info a {
+  display: none;
   text-decoration: none;
   outline: none;
   cursor: pointer;
@@ -306,7 +286,7 @@
 
 @media screen and (max-width: 761px) {
   #portfolio-section #project-selector .project {
-    min-height: 250px;
+    min-height: 200px;
   }
 }
 
@@ -368,7 +348,7 @@
 }
 
 #portfolio-section #project-selector .project .overpane span:first-child {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 761px) {
@@ -430,5 +410,35 @@
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
+
+@-webkit-keyframes hover {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes hover {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

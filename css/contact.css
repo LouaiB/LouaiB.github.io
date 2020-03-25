@@ -116,6 +116,7 @@
 }
 
 #contact-section #touch-section #contact #email button {
+  outline: none;
   padding: 15px 20px;
   margin-bottom: 30px;
   border: 2px solid #173a5f;
