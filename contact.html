@@ -25,6 +25,7 @@
             <div id="touch-title">
                 <span>Get in Touch</span>
                 <span class="error-msg"></span>
+                <span class="success-msg"></span>
             </div>
             <div id="contact">
                 <div id="email">
@@ -87,6 +88,7 @@
     const emailBodyInput = document.querySelector('#email-body');
     const emailSubjectInput = document.querySelector('#email-subject');
     const errorMsg = document.querySelector('.error-msg');
+    const successMsg = document.querySelector('.success-msg');
 
     emailBodyInput.addEventListener('click', () => emailBodyInput.classList.remove('danger-input'));
     emailSubjectInput.addEventListener('click', () => emailSubjectInput.classList.remove('danger-input'));
@@ -97,6 +99,7 @@
         let isValid = true;
         let errors = [];
         errorMsg.innerHTML = "";
+        successMsg.innerHTML = "";
 
         // Validation
         if(body.length < 20){
@@ -121,5 +124,10 @@
         }
 
         window.open(`mailto:baydoun.louai@gmail.com?subject=${subject}&body=${body}`);
+
+        // Reset and Inform
+        emailBodyInput.value = '';
+        emailSubjectInput.value = '';
+        successMsg.innerHTML = 'Your email client has been requested';
     }
 </script>
