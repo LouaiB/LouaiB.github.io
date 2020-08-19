@@ -1,0 +1,116 @@
+.photo-grid{
+    display: grid;
+    gap: 50px;
+    padding: 30px max(30px, 20%);
+    background: #1a1a1a;
+
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+
+    /* Variables */
+    --entrance-speed: 200ms;
+    --stagger-delay: 100ms;
+    --blur: 0;
+    --grayscale: 0;
+    --brightness: 1;
+    --invert: 0;
+    --mosaic-size: 5px;
+}
+
+@media screen and (min-width: 600px){
+    .photo-grid > *:nth-child(4n+1){
+        grid-row: span 2 / auto;
+    }
+
+    .photo-grid > *:nth-child(3n+2){
+        grid-column: span 2 / auto;
+    }
+}
+
+.photo-grid > *{
+    /* if <img /> */
+    /* height: 100%;
+    width: 100%;
+    object-fit: cover; */
+
+    /* if div */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Grayed Effect */
+.grayed-effect:not(:hover){
+    /* filter: grayscale(0.4); */
+    --grayscale: 0.4;
+}
+.grayed-effect:hover{
+    /* filter: grayscale(none); */
+    --grayscale: 0;
+}
+
+/* Blur Effect */
+.blur-effect:not(:hover){
+    /* filter: blur(1px); */
+    --blur: 1px;
+}
+.blur-effect:hover{
+    /* filter: blur(none); */
+    --blur: 0;
+}
+
+.effect{
+    filter: grayscale(var(--grayscale)) blur(var(--blur)) brightness(var(--brightness)) invert(var(--invert));
+}
+
+/* Entrance */
+.entrance:nth-child(6n+1){
+    animation: entrance var(--entrance-speed) ease-in;
+    animation-fill-mode: backwards;
+    animation-delay: calc(1 * var(--stagger-delay));
+}
+.entrance:nth-child(6n+2){
+    animation: entrance var(--entrance-speed) ease-in;
+    animation-fill-mode: backwards;
+    animation-delay: calc(2 * var(--stagger-delay));
+}
+.entrance:nth-child(6n+3){
+    animation: entrance var(--entrance-speed) ease-in;
+    animation-fill-mode: backwards;
+    animation-delay: calc(3 * var(--stagger-delay));
+}
+.entrance:nth-child(6n+4){
+    animation: entrance var(--entrance-speed) ease-in;
+    animation-fill-mode: backwards;
+    animation-delay: calc(4 * var(--stagger-delay));
+}
+.entrance:nth-child(6n+5){
+    animation: entrance var(--entrance-speed) ease-in;
+    animation-fill-mode: backwards;
+    animation-delay: calc(5 * var(--stagger-delay));
+}
+.entrance:nth-child(6n+6){
+    animation: entrance var(--entrance-speed) ease-in;
+    animation-fill-mode: backwards;
+    animation-delay: calc(6 * var(--stagger-delay));
+}
+
+.photo-grid > *:hover{
+    transform: scale(1.02);
+    box-shadow: 2px 2px 2px #00000033;
+}
+
+@keyframes entrance {
+    from{
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

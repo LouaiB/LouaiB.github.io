@@ -59,29 +59,7 @@
             overflow: hidden
             transition: all .4s
 
-            .gallery
-                width: 100%
-                position: relative
-                display: flex
-                flex-direction: row
-                flex-wrap: wrap
-                align-items: center
-                justify-content: space-between
-                padding: 40px 20px
-                box-sizing: border-box
-                background: linear-gradient(135deg, #eaeaea, #bcbcbc)
-                @media screen and (max-width: 761px)
-                    padding: 10px
-
-                // &:before
-                //     content: ""
-                //     position: absolute
-                //     left: 50%
-                //     top: 0
-                //     margin-left: -25%
-                //     height: 0px
-                //     width: 50%
-                //     border-bottom: 2px solid white
+            .photo-grid
                 
                 >div
                     min-height: 150px
@@ -106,6 +84,7 @@
                         left: 0
                         height: 100%
                         width: 100%
+                        background-color: #67cfff
                         display: flex
                         flex-direction: column
                         align-items: center
@@ -118,26 +97,6 @@
 
                         &:hover
                             opacity: .7
-
-            .gallery-renshuu
-                
-                // background: linear-gradient(135deg, #5631ac, #21158f)
-
-                >div
-                    .overimage
-                        background-color: #0cb2ff
-
-            .gallery-fms
-                // background: linear-gradient(135deg, #1b579b, #001353)
-
-                .overimage
-                    background-color: #0cb2ff
-
-            .gallery-deltaco
-                // background: linear-gradient(135deg, #521b9b, #160053)
-
-                .overimage
-                    background-color: #0cb2ff
 
             .info
                 flex: 2 2 0

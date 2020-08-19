@@ -90,37 +90,7 @@
   transition: all .4s;
 }
 
-#portfolio-section #project-info .project .gallery {
-  width: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 40px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: linear-gradient(135deg, #eaeaea, #bcbcbc);
-}
-
-@media screen and (max-width: 761px) {
-  #portfolio-section #project-info .project .gallery {
-    padding: 10px;
-  }
-}
-
-#portfolio-section #project-info .project .gallery > div {
+#portfolio-section #project-info .project .photo-grid > div {
   min-height: 150px;
   min-width: 150px;
   padding: 10px;
@@ -140,18 +110,19 @@
 }
 
 @media screen and (max-width: 761px) {
-  #portfolio-section #project-info .project .gallery > div {
+  #portfolio-section #project-info .project .photo-grid > div {
     min-height: 80px;
     min-width: 80px;
   }
 }
 
-#portfolio-section #project-info .project .gallery > div .overimage {
+#portfolio-section #project-info .project .photo-grid > div .overimage {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  background-color: #67cfff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,20 +144,8 @@
   transition: all .2s;
 }
 
-#portfolio-section #project-info .project .gallery > div .overimage:hover {
+#portfolio-section #project-info .project .photo-grid > div .overimage:hover {
   opacity: .7;
-}
-
-#portfolio-section #project-info .project .gallery-renshuu > div .overimage {
-  background-color: #0cb2ff;
-}
-
-#portfolio-section #project-info .project .gallery-fms .overimage {
-  background-color: #0cb2ff;
-}
-
-#portfolio-section #project-info .project .gallery-deltaco .overimage {
-  background-color: #0cb2ff;
 }
 
 #portfolio-section #project-info .project .info {
