@@ -91,29 +91,8 @@
 }
 
 #portfolio-section #project-info .project .photo-grid > div {
-  min-height: 150px;
-  min-width: 150px;
-  padding: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-  margin: 10px 10px;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
   -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all .6s;
-  transition: all .6s;
-}
-
-@media screen and (max-width: 761px) {
-  #portfolio-section #project-info .project .photo-grid > div {
-    min-height: 80px;
-    min-width: 80px;
-  }
 }
 
 #portfolio-section #project-info .project .photo-grid > div .overimage {
