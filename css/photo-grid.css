@@ -19,11 +19,12 @@
 }
 
 @media screen and (min-width: 600px){
-    .photo-grid > *:nth-child(4n+1){
-        grid-row: span 2 / auto;
+    .photo-grid > *:nth-child(5n+3){
+        grid-column: span 2 / auto;
     }
 
-    .photo-grid > *:nth-child(3n+2){
+    .photo-grid > *:nth-child(4n+2){
+        grid-row: span 2 / auto;
         grid-column: span 2 / auto;
     }
 }
