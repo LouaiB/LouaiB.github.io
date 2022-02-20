@@ -1,0 +1,759 @@
+/* 
+Main CSS file for the website
+
+Table of Content:
+1. General
+2. Header
+3. Footer
+4. Side Socials
+5. Homepage
+6. Bubble with Content Tree
+7. About
+8. Team
+9. Products
+10. Product Details
+11. Responsive Media Queries
+*/
+
+/* 1. General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Colors */
+    --primary1: #c20f2f;
+    --primary2: #f4c70a;
+    --primary3: #1b2259;
+    --primary4: #218b17;
+    
+    --primary2-faded: #ac8900da;
+    --primary3-faded: #000b40e0;
+    --primary4-faded: #218b17c2;
+
+    /* Other Vars */
+    --header-side-padding: 40px;
+
+    /* Font */
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+/* 2. Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px var(--header-side-padding);
+    z-index: 20;
+}
+.header-left {
+    position: relative;
+    border-left: 1px solid white;
+    padding-left: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+}
+.header-left::before,
+.header-left::after {
+    position: absolute;
+    content: '';
+    background: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+.header-left::before {
+    top: 0;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+.header-left::after {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%) translateY(50%);
+}
+
+.header-nav {
+    /* position: relative; */
+}
+.header-nav-icon-wrapper {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-nav-icon-wrapper i {
+    font-size: 1.5em;
+    color: white;
+}
+.header-nav-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    transform: translateX(100%);
+    height: 100vh;
+    padding: 10px 30px;
+    transition: all 0.5s ease;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.header-nav-list a {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 3em;
+}
+.header-nav-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    background: #00000055;
+    transition: all 0.5s ease;
+}
+.nav-open .header-nav-list {
+    transform: translateX(0);
+}
+.nav-open .header-nav-overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dark-header .header-left,
+.dark-header .header-nav-icon-wrapper i {
+    color: black;
+}
+.dark-header .header-left {
+    border-color: black;
+}
+.dark-header .header-left::before,
+.dark-header .header-left::after {
+    background: black;
+}
+
+/* 3. Footer */
+
+/* 4. Socials */
+.floating-socials {
+    position: fixed;
+    top: 50%;
+    right: var(--header-side-padding);
+    z-index: 3;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.floating-socials a {
+    margin: 4px 0;
+    background: black;
+    border-radius: 50%;
+    padding: 4px;
+    height: 1.7em;
+    width: 1.7em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.floating-socials a i {
+    font-size: 1em;
+    color: white;
+}
+
+/* 5. Homepage */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero1 {
+    background-image: url('../img/bg/hero1BG.png');
+    background-color: #00000055;
+    background-blend-mode: darken;
+}
+.hero2 {
+    background-image: url('../img/bg/hero2BG.png');
+    background-color: var(--primary3);
+    background-blend-mode: soft-light;
+}
+.hero3 {
+    background-image: url('../img/bg/hero3BG.jpg');
+    background-color: #0e360f;
+    background-blend-mode: overlay;
+}
+
+.hero-bubble {
+    font-size: 2em;
+    height: 80vh;
+    width: 80vh;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-bubble-primary1-filled {
+    background: var(--primary1);
+    color: white;
+}
+.hero-bubble-white {
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+}
+.hero-bubble-primary2-filled {
+    background: var(--primary2);
+    color: white;
+}
+
+.hero1 .hero-bubble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+.hero2 .hero-bubble {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.hero3 .hero-bubble {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.hero2 .hero-bubble {
+    height: 90vh;
+    width: 90vh;
+}
+.hero2 .hero-bubble h2 {
+    font-size: 4em;
+}
+
+.hero3 .hero-bubble {
+    color: black;
+}
+
+.hero3-note {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary2);
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/* 6. Bubble with Content Tree */
+body.team-page main {
+    background-image: url('../img/bg/teamBG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffffff88;
+    background-blend-mode: lighten;
+}
+.bubble-tree {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh 0;
+}
+.bubble-tree__bubble {
+    background: var(--primary3-faded);
+    width: 60vh;
+    height: 60vh;
+    max-width: 70vw;
+    max-height: 70vw;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px 50px;
+    line-height: 1.4em;
+}
+.bubble-tree--primary2 .bubble-tree__bubble {
+    background: var(--primary2-faded);
+    color: white;
+}
+.bubble-tree__dash {
+    height: 200px;
+    width: 10px;
+    background: var(--primary3);
+}
+.bubble-tree--primary2 .bubble-tree__dash {
+    background: var(--primary2);
+}
+.bubble-tree__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.bubble-tree__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--primary3);
+    padding: 5px;
+    border-right: 6px solid var(--primary3);
+    transform: translateX(calc(-50% + 5px));
+    height: 140px;
+}
+.bubble-tree--primary2 .bubble-tree__item {
+    background: var(--primary2);
+    border-color: var(--primary2);
+}
+.bubble-tree__item:nth-child(2n) {
+    border-left: 6px solid var(--primary3);
+    transform: translateX(calc(50% - 5px));
+}
+.bubble-tree--primary2 .bubble-tree__item:nth-child(2n) {
+    border-color: var(--primary2);
+}
+.bubble-tree__item-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.bubble-tree__item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.bubble-tree__item-content-drawer {
+    color: white;
+    max-height: 100%;
+    padding: 10px 20px;
+    width: 30vw;
+    min-width: 30vw;
+}
+.bubble-tree--primary2 .bubble-tree__item-content-drawer {
+    color: black;
+}
+.bubble-tree__item--open .bubble-tree__item-content {
+    width: 30vw;
+    overflow-y: auto;
+}
+.bubble-tree__item-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.bubble-tree__item-description {
+    font-size: 0.9em;
+}
+.bubble-tree__end {
+    height: 100px;
+    width: 100px;
+    background: var(--primary3);
+    border-radius: 50%;
+}
+.bubble-tree--primary2 .bubble-tree__end {
+    background: var(--primary2);
+}
+
+/* 7. About */
+body.about-page main {
+    background: url('../img/bg/hero1BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffffff88;
+    background-blend-mode: lighten;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-bubble {
+    position: relative;
+    background: var(--primary4-faded);
+    width: 70vh;
+    height: 70vh;
+    max-width: 80vw;
+    max-height: 80vw;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+}
+.about-bubble::after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100vh;
+    background: var(--primary4);
+}
+.about-bubble__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.about-bubble__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+}
+.about-bubble__col:last-child {
+    align-items: flex-start;
+    border-left: 2px solid white;
+}
+.about-bubble__line {
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+.about-bubble__line--emphasize {
+    font-size: 1.5em;
+    line-height: 1.6em;
+    font-weight: bold;
+}
+.about-bubble__email {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 8. Team */
+/* Default style of bubble tree, no extra rules needed */
+
+/* 9. Projects */
+body.projects-page main {
+    background-image: url('../img/bg/hero3BG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffffff88;
+    background-blend-mode: lighten;
+}
+.read-more-link {
+    color: var(--primary1);
+    font-weight: bold;
+}
+
+/* 10. Project Details */
+body.project-page main {
+    /* background-image: url('../img/bg/hero3BG.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffffff;
+    background-blend-mode: lighten;
+    padding: 20px 10vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+.page-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.back-btn i {
+    margin-right: 10px;
+}
+.project-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.project-details__cover {
+    flex: 3;
+    height: auto;
+}
+.project-details__dash {
+    position: relative;
+    width: 1px;
+    align-self: stretch;
+    background: #333333;
+    margin: 0 20px;
+}
+.project-details__dash::before {
+    position: absolute;
+    content: '';
+    top: 30%;
+    left: 0;
+    transform: translateX(calc(-50% + 0.5px));
+    width: 6px;
+    height: 30px;
+    background: #333333;
+}
+.project-details__description {
+    flex: 1;
+}
+.project-details__logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.project-details__text {
+    color: black;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding-right: 40px;
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------- 11. Responsive -------- */
+/* --------------------------------- */
+/* --------------------------------- */
+@media (max-width: 600px) {
+    /* 1. General */
+    html {
+        --header-side-padding: 20px;
+    }
+
+    /* 5. Homepage */
+    .hero-bubble {
+        font-size: 1.2em;
+        height: 80vw;
+        width: 80vw;
+    }
+
+    .hero1 .hero-bubble {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+    }
+    .hero2 .hero-bubble {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 2;
+    }
+    .hero3 .hero-bubble {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+    }
+
+    .hero2 .hero-bubble {
+        height: 90vw;
+        width: 90vw;
+    }
+    .hero2 .hero-bubble span {
+        font-size: 0.9em;
+    }
+    .hero2 .hero-bubble h2 {
+        font-size: 2em;
+    }
+
+    .hero3 .hero-bubble {
+        font-size: 1em;
+    }
+
+    .hero3-note {
+        position: absolute;
+        top: unset;
+        left: unset;
+        bottom: 30px;
+        transform: unset;
+        text-align: center;
+        font-size: 1em;
+        padding: 0 40px;
+    }
+
+    /* 6. Bubble with Content Tree */
+    .bubble-tree__bubble {
+        font-size: 1.1em;
+        padding: 10px 25px;
+        line-height: 1.2em;
+    }
+    .bubble-tree__dash {
+        height: 100px;
+    }
+    .bubble-tree__item {
+        padding: 5px;
+        border-right: 0;
+        transform: unset;
+        height: 80px;
+        margin: 5px 0;
+    }
+    .bubble-tree__item:nth-child(2n) {
+        border-left: 0;
+        transform: unset;
+    }
+    .bubble-tree__item-content {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .bubble-tree__item-content-drawer {
+        padding: 5px 10px;
+        width: calc(90vw - 80px);
+        min-width: calc(90vw - 80px);
+    }
+    .bubble-tree__item--open .bubble-tree__item-content {
+        width: calc(90vw - 80px);
+        overflow-y: auto;
+    }
+    .bubble-tree__item-title {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .bubble-tree__item-description {
+        font-size: 12px;
+    }
+    .bubble-tree__end {
+        height: 100px;
+        width: 100px;
+        background: var(--primary3);
+        border-radius: 50%;
+    }
+
+    /* 7. About */
+    .about-bubble {
+        padding: 10px 5px;
+    }
+    .about-bubble__col {
+        padding: 6px;
+    }
+    .about-bubble__line {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .about-bubble__line--emphasize {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .about-bubble__email {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    /* 10. Project Details */
+    body.project-page main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .back-btn {
+        font-size: 1.3em;
+    }
+    .project-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-details__cover {
+        flex: unset;
+        width: 100%;
+        height: auto;
+    }
+    .project-details__dash {
+        width: 70%;
+        height: 1px;
+        margin: 20px 0;
+        align-self: center;
+    }
+    .project-details__dash::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(calc(-50% + 0.5px));
+        width: 30px;
+        height: 6px;
+    }
+    .project-details__description {
+        flex: unset;
+        text-align: center;
+    }
+    .project-details__logo {
+        width: 100px;
+    }
+    .project-details__text {
+        color: black;
+        font-size: 1em;
+        line-height: 1.2em;
+        padding: 0 20px;
+    }
+
+}

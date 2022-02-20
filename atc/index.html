@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/_main.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- Header Left (Logo) -->
+        <div class="header-left">
+            <span>AROUND</span>
+            <span>THE</span>
+            <span>WORLD</span>
+        </div>
+
+        <!-- Header Right (Nav) -->
+        <div class="header-nav" id="headerNav">
+            <div class="header-nav-icon-wrapper" id="navBtn">
+                <i class="fa fa-bars"></i>
+            </div>
+            <nav class="header-nav-list" id="navList">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="team.html">Team</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="header-nav-overlay" id="headerNavOverlay"></div>
+        </div>
+
+    </header>
+
+    <!-- Floating Socials -->
+    <div class="floating-socials">
+        <a href="" traget="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="" traget="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" traget="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="" traget="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="" traget="_blank"><i class="fa-solid fa-location-dot"></i></a>
+    </div>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Hero 1 -->
+        <section class="hero hero1">
+
+            <!-- Hero 1 Bubble -->
+            <div class="hero-bubble hero-bubble-primary1-filled">
+                <span class="wow bounceInUp" data-wow-duration="1s">Creative solutions that inspire.</span>
+                <span class="wow bounceInUp" data-wow-duration="1s">Brand Stories that connect.</span>
+                <span class="wow bounceInUp" data-wow-duration="1s">Ideation with impact.</span>
+            </div>
+
+        </section>
+
+        <!-- Hero 2 -->
+        <section class="hero hero2">
+
+            <!-- Hero 2 Bubble -->
+            <div class="hero-bubble hero-bubble-white">
+                <h2>We are</h2>
+                <span>data-driven with a holistic approach for communication objectives</span>
+            </div>
+
+        </section>
+
+        <!-- Hero 3 -->
+        <section class="hero hero3">
+
+            <!-- Hero 3 Bubble -->
+            <div class="hero-bubble hero-bubble-primary2-filled">
+                <span>STRATEGIC MINDSET</span>
+                <span>CREATION & IDEATION</span>
+                <span>DIGITALIZATION</span>
+                <span>SOCIAL CONTENT</span>
+                <span>IMMERSIVE EXPERIENCE</span>
+                <span>PUBLIC RELATIONS</span>
+                <span>PODCASTS</span>
+                <span>E-SPORTS</span>
+            </div>
+
+            <!-- Hero 3 Small Text -->
+            <p class="hero3-note">Delivering impactful integrated solutions and campaigns from brand strategy, media planning and buying for both offline and online, creative advertising, digital strategy, media planning, web application development and public relations.</p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/_main.js"></script>
+
+    <!-- WOW -->
+    <script>
+        window.addEventListener('load', function(ev) {
+            // Init the WOW animation library
+            new WOW().init();
+        })
+        $(function(){
+            new WOW().init(); 
+        });
+    </script>
+
+</body>
+</html>
